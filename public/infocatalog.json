@@ -1,0 +1,17 @@
+{
+    "catalog":
+    [
+    {
+        "id": 1,
+        "text": "this is test item #1"
+    },
+    {
+        "id": 2,
+        "text": "this is test item 2"
+    },
+    {
+        "id": 3,
+        "text": "ajskldjsk ITEM THREEEEEE"
+    }
+    ]
+}
