@@ -1,1 +1,1 @@
-# A Better Information Course Catalog
+# A Better Information Course Catalog for MIMS

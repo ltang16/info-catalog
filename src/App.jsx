@@ -17,10 +17,10 @@ function App() {
     <ul className="course-list">
       {catalog && catalog.map((course) => (
         <li className="course-item">
-          <p className="course-id">ID: {course.id}</p>
-          <p className="course-text">{course.text}</p>
+          <p className="course-id">Info {course.id}</p>
+          <p className="course-title">{course.title}</p>
         </li>
-    ))}
+      ))}
     </ul>
     </>
   )
