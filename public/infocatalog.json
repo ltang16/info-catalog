@@ -32,6 +32,36 @@
         "other": null
     },
     {
+        "id": 203,
+        "title": "Social Issues of Information",
+        "units": 3,
+        "instructor": "Morgan Ames",
+        "description": "This course is designed to be an introduction to the topics and issues associated with information and information technology and its role in society. Throughout the semester we will consider both the consequence and impact of technologies on social groups and on social interaction and how society defines and shapes the technologies that are produced. Students will be exposed to a broad range of applied and practical problems, theoretical issues, as well as methods used in social scientific analysis. The four sections of the course are: 1) theories of technology in society, 2) information technology in workplaces 3) automation vs. humans, and 4) networked sociability.",
+        "semester": "Spring 2026",
+        "timeslot": "Wednesday, 2:00pm - 5:00pm",
+        "location": "Goldman School of Public Policy 150",
+        "type": "Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Social Impact"],
+        "other": null
+    },
+    {
+        "id": 205,
+        "title": "Information Law and Policy",
+        "units": 3,
+        "instructor": "Deirdre Mulligan",
+        "description": "This course uses examples from various commercial domains — retail, health, credit, entertainment, social media, and biosensing/quantified self — to explore legal and ethical issues including freedom of expression, privacy, research ethics, consumer protection, information and cybersecurity, and copyright. The class emphasizes how existing legal and policy frameworks constrain, inform, and enable the architecture, interfaces, data practices, and consumer facing policies and documentation of such offerings; and, fosters reflection on the ethical impact of information and communication technologies and the role of information professionals in legal and ethical work.",
+        "semester": "Spring 2026",
+        "timeslot": "Monday, 2:00pm - 5:00pm",
+        "location": "Goldman School of Public Policy 150",
+        "type": "Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Law and Policy", "Ethics"],
+        "other": null
+    },
+    {
         "id": "206A",
         "title": "Introduction to Programming and Computation",
         "units": 2,
@@ -77,18 +107,78 @@
         "other": "Thanks for your interest in Info 213. Since this is a graduate level class in the School of Information, there's only space for a select number of undergraduates and students from other departments. If interested in enrolling in this course, fill out this form to express interest in enrolling in this course - https://forms.gle/e4EhQPbjy3LSyXU58 The deadline to submit the application form is Friday, July 25. Candidates who submitted the form will receive notification if enrolled by Friday, August 15. If you do not receive any communication about enrollment by this date, you will not be enrolled in INFO 213."
     },
     {
+        "id": 214,
+        "title": "User Experience Research",
+        "units": 3,
+        "instructor": "Steve Fadden",
+        "description": "This course addresses concepts and methods of user experience research, from understanding and identifying needs, to evaluating concepts and designs, to assessing the usability of products and solutions. We emphasize methods of collecting and interpreting qualitative data about user activities, working both individually and in teams, and translating them into design decisions. Students gain hands-on practice with observation, interview, survey, focus groups, and expert review. Team activities and group work are required during class and for most assignments. Additional topics include research in enterprise, consulting, and startup organizations, lean/agile techniques, mobile research approaches, and strategies for communicating findings.",
+        "semester": "Spring 2026",
+        "timeslot": "Thursday, 2:30pm - 5:30pm",
+        "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["User Experience (UX) Design", "Research", "Human-Computer Interaction"],
+        "other": "All non-School of Information students must fill out this form for consideration: https://docs.google.com/forms/d/e/1FAIpQLSdv2jUh1LSePCZYCDuO6vIUv4lPENfMI4nDMKvIYe7A8Y5TFg/viewform?usp=header"
+    },
+    {
+        "id": 218,
+        "title": "Concepts of Information",
+        "units": 3,
+        "instructor": "Deb Donig",
+        "description": "Three hours of lecture per week. Prerequisites: Graduate standing. As it's generally used, 'information' is a collection of notions, rather than a single coherent concept. In this course, we'll examine conceptions of information based in information theory, philosophy, social science, economics, and history. Issues include: How compatible are these conceptions; can we talk about 'information' in the abstract? What work do these various notions play in discussions of literacy, intellectual property, advertising, and the political process? And where does this leave 'information studies' and 'the information society'?",
+        "semester": "Spring 2026",
+        "timeslot": "Thursday, 2:00pm - 5:00pm",
+        "location": "South Hall 205",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Information Organization", "Social Impact"],
+        "other": null
+    },
+    {
         "id": 225,
         "title": "Foundations of Leadership and Influence in Tech",
         "units": 3,
         "instructor": "Judd Antin",
         "description": "Succeeding in today’s distributed, technology-rich companies demands effectively leading and influencing others. This dynamic, interactive course is designed for ambitious professionals who are looking to have an impact, whether just starting out or already managing teams. Drawing heavily from social psychology and organizational behavior, this course goes beyond theory to develop real-world approaches. Students will engage with case studies and hands-on exercises to build the practical, research-backed skills needed to drive business impact with leadership and influence. A key focus is understanding workplace hierarchies and social dynamics, equipping students to thrive in complex, organizations — whether in tech or beyond.",
-        "semester": "Fall 2025",
-        "timeslot": "Tuesday, 4:00pm - 7:00pm",
+        "semester": ["Fall 2025", "Spring 2026"],
+        "timeslot": ["Tuesday, 4:00pm - 7:00pm", "Tuesday, 4:00pm - 7:00pm"],
         "location": "South Hall 210",
         "type": "Non-Core",
         "requirements": null,
         "DS-certification": null,
         "topics": ["Leadership", "Business", "Social Psychology"],
+        "other": null
+    },
+    {
+        "id": 230,
+        "title": "Cultural Analytics: Theories and Methods",
+        "units": 3,
+        "instructor": "Timothy Tangherlini",
+        "description": "This course introduces cultural analytics, an interdisciplinary field at the intersection of humanities, social sciences, and data science. Students explore how computational methods and digital archives are used to study culture across time and scale. Emphasis is placed on multiscale analysis — from close reading to distant reading — and on ethical, responsible engagement with large-scale cultural data. The course addresses challenges of data validity, the role of collaboration across disciplines, and the societal impact of cultural analytics, including its use in heritage preservation and disaster response. Students gain both technical tools and critical frameworks for studying culture in the digital age.",
+        "semester": "Spring 2026",
+        "timeslot": "Tuesday, 2:00pm - 5:00pm",
+        "location": "South Hall 205",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Anthropology", "Social Impact", "Data Science", "Natural Language Processing (NLP)"],
+        "other": null
+    },
+    {
+        "id": 233,
+        "title": "Social Psychology and Information Technology",
+        "units": 3,
+        "instructor": "Coye Cheshire",
+        "description": "Discusses application of social psychological theory and research to information technologies and systems; we focus on sociological social psychology, which largely focuses on group processes, networks, and interpersonal relationships. Information technologies considered include software systems used on the internet such as social networks, email, and social games, as well as specific hardware technologies such as mobile devices, computers, wearables, and virtual/augmented reality devices. We examine human communication practices, through the lens of different social psychology theories, including: symbolic interaction, identity theories, social exchange theory, status construction theory, and social networks and social structure theory.",
+        "semester": "Spring 2026",
+        "timeslot": "Tuesday & Thursday, 12:30pm - 2:00pm",
+        "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": "Social Science and Policy",
+        "DS-certification": null,
+        "topics": ["Social Psychology"],
         "other": null
     },
     {
@@ -122,6 +212,36 @@
         "other": null
     },
     {
+        "id": 247,
+        "title": "Information Visualization and Presentation",
+        "units": "3 - 4",
+        "instructor": "Marti Hearst",
+        "description": "This course explores how visual representations reveal patterns and structure in complex data by leveraging human visual perception. Students critically examine the field of information visualization, analyzing why certain methods succeed or fail based on usability and adoption. Through hands-on projects and analysis, the course emphasizes how to present information clearly, accurately, and effectively to communicate insights and support data-driven decision-making.",
+        "semester": "Spring 2026",
+        "timeslot": ["Monday & Wednesday, 10:00am - 11:30am", "Wednesday, 12:00pm - 1:00pm (Lab Section, 4 units only)"],
+        "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": "Technology",
+        "DS-certification": "Elective",
+        "topics": ["Data Science", "Data Visualization", "Programming"],
+        "other": "Unit Count & Additional Lab\\nStudents taking the course for 3 units: 3 hours of lecture per week only; no additional lab. For MIMS students: the 3-unit course does not satisfy the MIMS Technology Requirement\\nStudents taking the course for 4 units: 3 hours of lecture per week 1 additional hour of lab per week. For MIMS students: the 4-unit course does satisfy the MIMS Technology Requirement"
+    },
+    {
+        "id": 251,
+        "title": "Applied Machine Learning",
+        "units": 4,
+        "instructor": "Joshua Blumenstock",
+        "description": "Provides a theoretical and practical introduction to modern techniques in applied machine learning. Covers key concepts in supervised and unsupervised machine learning, including the design of machine learning experiments, algorithms for prediction and inference, optimization, and evaluation. Students will learn functional, procedural, and statistical programming techniques for working with real-world data.",
+        "semester": "Spring 2026",
+        "timeslot": ["Tuesday & Thursday, 9:30am - 11:00am", "Wednesday, 9:00am - 10:30am (Lab Section)"],
+        "location": "South Hall 210",
+        "type": "Non-Core",
+        "requirements": "Technology",
+        "DS-certification": "Analytical Methods and Techniques of Data Science Course",
+        "topics": ["Artificial Intelligence (AI)", "Machine Learning", "Programming"],
+        "other": null
+    },
+    {
         "id": "253A",
         "title": "Front-End Web Architecture",
         "units": 3,
@@ -133,7 +253,22 @@
         "type": "Non-Core",
         "requirements": "Technology",
         "DS-certification": null,
-        "topics": ["Programming", "HTML & CSS", "React"],
+        "topics": ["Programming", "Web Development", "HTML & CSS", "React"],
+        "other": null
+    },
+    {
+        "id": "253B",
+        "title": "Back-End Web Architecture",
+        "units": 3,
+        "instructor": "Kay Ashaolu",
+        "description": "This course is a survey of web technologies that are used to build back-end systems that enable rich web applications. Utilizing technologies such as Python, Flask, Docker, RDBMS/NoSQL databases, and Spark, this class aims to cover the foundational concepts that drive the web today. This class focuses on building APIs using micro-services that power everything from content management systems to data engineering pipelines that provide insights by processing large amounts of data. The goal of this course is to provide an overview of the technical issues surrounding back-end systems today, and to provide a solid and comprehensive perspective of the web’s constantly evolving landscape.",
+        "semester": "Spring 2026",
+        "timeslot": ["Monday, 9:00am - 11:00am", "Friday, 9:00am - 10:00am (Lab Section)"],
+        "location": "South Hall 210",
+        "type": "Non-Core",
+        "requirements": "Technology",
+        "DS-certification": null,
+        "topics": ["Programming", "Web Development", "Data Engineering"],
         "other": null
     },
     {
@@ -145,6 +280,21 @@
         "semester": "Fall 2025",
         "timeslot": "Tuesday & Thursday, 3:30pm - 5:00pm",
         "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": "Technology",
+        "DS-certification": "Elective",
+        "topics": ["Programming", "Natural Language Processing (NLP)"],
+        "other": null
+    },
+    {
+        "id": 259,
+        "title": "Natural Language Processing",
+        "units": 4,
+        "instructor": "David Bamman",
+        "description": "This course introduces students to natural language processing and exposes them to the variety of methods available for reasoning about text in computational systems. NLP is deeply interdisciplinary, drawing on both linguistics and computer science, and helps drive much contemporary work in text analysis (as used in computational social science, the digital humanities, and computational journalism). We will focus on major algorithms used in NLP for various applications (part-of-speech tagging, parsing, coreference resolution, machine translation) and on the linguistic phenomena those algorithms attempt to model. Students will implement algorithms and create linguistically annotated data on which those algorithms depend.",
+        "semester": "Spring 2026",
+        "timeslot": "Tuesday & Thursday, 3:30pm - 5:00pm",
+        "location": "Haas Faculty Wing F295",
         "type": "Non-Core",
         "requirements": "Technology",
         "DS-certification": "Elective",
@@ -164,6 +314,21 @@
         "requirements": "Technology",
         "DS-certification": null,
         "topics": ["Human-Computer Interaction", "User Interface (UI) Design"],
+        "other": null
+    },
+    {
+        "id": "C265",
+        "title": "Interface Aesthetics",
+        "units": 3,
+        "instructor": "Kimiko Ryokai",
+        "description": "This course will cover new interface metaphors beyond desktops (e.g., for mobile devices, computationally enhanced environments, tangible user interfaces) but will also cover visual design basics (e.g., color, layout, typography, iconography) so that we have systematic and critical understanding of aesthetically engaging interfaces. Students will get a hands-on learning experience on these topics through course projects, design critiques, and discussion, in addition to lectures and readings. Two hours of lecture per week.",
+        "semester": "Spring 2026",
+        "timeslot": "Friday, 9:30am - 12:30pm",
+        "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": "Technology",
+        "DS-certification": null,
+        "topics": ["User Interface (UI) Design", "Human-Computer Interaction"],
         "other": null
     },
     {
@@ -197,13 +362,28 @@
         "other": null
     },
     {
+        "id": 288,
+        "title": "Big Data and Development",
+        "units": 3,
+        "instructor": "Joshua Blumenstock",
+        "description": "As new sources of digital data proliferate in developing economies, there is the exciting possibility that such data could be used to benefit the world’s poor. Through a careful reading of recent research and through hands-on analysis of large-scale datasets, this course introduces students to the opportunities and challenges for data-intensive approaches to international development. Students should be prepared to dissect, discuss, and replicate academic publications from several fields including development economics, machine learning, information science, and computational social science. Students will also conduct original statistical and computational analysis of real-world data.",
+        "semester": "Spring 2026",
+        "timeslot": "Tuesday, 12:30pm - 3:30pm",
+        "location": "South Hall 210",
+        "type": "Non-Core",
+        "requirements": "Social Science and Policy",
+        "DS-certification": "Elective",
+        "topics": ["Data Science", "Social Impact"],
+        "other": null
+    },
+    {
         "id": 289,
         "title": "Public Interest Cybersecurity: The Cybersecurity Clinic Practicum",
         "units": 3,
         "instructor": "Elijah Baucom",
         "description": "This course provides students with real-world experience assisting politically vulnerable organizations and persons around the world to develop and implement sound cybersecurity practices. In the classroom, students study basic theories and practices of digital security, intricacies of protecting largely under-resourced organizations, and tools needed to manage risk in complex political, sociological, legal, and ethical contexts. In the clinic, students work in teams supervised by Clinic staff to provide direct cybersecurity assistance to civil society organizations. We emphasize pragmatic, workable solutions that take into account the unique needs of each partner organization.",
-        "semester": "Fall 2025",
-        "timeslot": "Tuesday & Thursday, 12:30pm - 2:00pm",
+        "semester": ["Fall 2025", "Spring 2026"],
+        "timeslot": ["Tuesday & Thursday, 12:30pm - 2:00pm", "Tuesday & Thursday, 12:30pm - 2:00pm"],
         "location": "South Hall 205",
         "type": "Non-Core",
         "requirements": null,
@@ -317,6 +497,126 @@
         "other": "Students must have at least one semester of training in statistics, machine learning, or data science. To register, interested students must first email the instructor to arrange a brief meeting. This conversation will ensure that each student has the appropriate skills, interests, and understanding of the course’s collaborative and applied nature."
     },
     {
+        "id": 290,
+        "title": "UX for AI",
+        "units": 2,
+        "instructor": "Stefanie Hutka",
+        "description": "This course examines how generative artificial intelligence (AI) is reshaping how products are designed, and how students can evolve their UX practice to thrive in this rapidly changing landscape. They will learn to critically evaluate AI tools to identify their value in UX workflows, articulate informed perspectives on emerging debates in UX for AI (e.g., how AI is redefining design and product roles), and make thoughtful decisions about when to delegate tasks to AI versus keeping them human-led.\\nLearning activities include hands-on use and structured evaluation of leading AI-enabled design tools (e.g., Figma Make, Lovable, V0), analysis and discussion of current academic and industry literature (e.g., how generative AI challenges the foundations of human-centered design), and conversations with industry experts building AI products. The course emphasizes cultivating an intentional exploration mindset — learning by researching, building, testing, and reflecting — to align emerging AI capabilities with human-centered design values.",
+        "semester": "Spring 2026",
+        "timeslot": "Thursday, 9:00am - 11:00am",
+        "location": "South Hall 205",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["User Experience (UX) Design", "Artificial Intelligence (AI)", "Product Development"],
+        "other": "It's strongly recommended that students have a solid understanding of user experience design fundamentals, such as observation, prototyping, and testing, before enrolling in this course. This foundation can be acquired through courses such as INFO 213: Introduction to User Experience Design, INFO 215: Product Design Studio, and INFO C262: Theory and Practice of Tangible User Interfaces"
+    },
+    {
+        "id": 290,
+        "title": "Product, Design, and Leadership Workshop",
+        "units": 2,
+        "instructor": "Judd Antin",
+        "description": "In this hands-on workshop, students will strengthen their skills in strategic thinking, product design and research, leadership, and cross-functional collaboration. Each week we’ll explore real-world challenges drawn from students’ ongoing projects, which may range from team and organizational dynamics to early start-up ideas or capstone projects. Through discussions, peer feedback, and faculty-led readings and research reviews, students will engage with the latest developments in the field, and gain practical hands-on experience as leaders.",
+        "semester": "Spring 2026",
+        "timeslot": "Monday, 12:00pm - 2:00pm",
+        "location": "South Hall 205",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Product Development", "Leadership", "Product Management"],
+        "other": "Enrollment is limited to students with an ongoing project or leadership role which will serve as the basis for a presentation for class discussion."
+    },
+    {
+        "id": 290,
+        "title": "Fundamentals of Generative AI",
+        "units": 3,
+        "instructor": "Cornelia Paulik",
+        "description": "This course provides a foundation in the principles, architectures, and applications of generative artificial intelligence (GenAI). It explores how large language models (LLMs) work by guiding students through the complete model lifecycle: from core building blocks like embedding representations, attention mechanisms, and transformer architectures to adaptation techniques including in-context learning, instruction tuning, parameter-efficient fine-tuning (PEFT), and reinforcement learning from human feedback (RLHF).\\nThe course also explores advanced topics such as retrieval-augmented generation (RAG), agentic reasoning systems, and multimodal learning that extends beyond text to incorporate vision and other data modalities.\\nProgramming assignments, research paper readings, and a team-based final project will help students develop the technical proficiency to design, implement, and evaluate GenAI pipelines using Hugging Face, LangChain, and other open-source LLM APIs, while critically assessing their capabilities, limitations, and responsible use in real-world applications.",
+        "semester": "Spring 2026",
+        "timeslot": "Thursday, 11:00am - 2:00pm",
+        "location": "South Hall 210",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Programming", "Artificial Intelligence (AI)", "Natural Language Processing (NLP)"],
+        "other": "Graduate students only. Prerequisites include INFO 206A & 206B or equivalent Python programming proficiency. All assignments and notebooks will be based on Python."
+    },
+    {
+        "id": 290,
+        "title": "Interaction Design",
+        "units": 2,
+        "instructor": "Laith Ulaby",
+        "description": "This course will run as a design studio where students design new products as a way to explore the principles, processes, and outcomes of interaction design. Each week, students will complete both in-class and take-home projects that apply concepts and frameworks to real problem spaces. Class sessions will simulate professional design practice through weekly critiques, peer feedback, and design reviews. Students will be expected to present their work every week, engage actively in discussion, and refine their designs based on input.\\nAssignments will range from rapid, low-fidelity exercises to more developed interaction prototypes, giving students practice across the spectrum of design methods. The course culminates in a final project during the last weeks, where students bring together the skills, approaches, and insights developed throughout the semester. By the end of the course, students will have built a portfolio project and gained experience working within the collaborative, iterative culture of interaction design.",
+        "semester": "Spring 2026",
+        "timeslot": "Friday, 1:00pm - 3:00pm",
+        "location": "South Hall 202",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Product Development", "Human-Computer Interaction"],
+        "other": null
+    },
+    {
+        "id": 290,
+        "title": "Public Interest Technology Clinic",
+        "units": 3,
+        "instructor": "Diag Davenport",
+        "description": "This course brings students together as a product team to apply data science and analytics skills to nonprofit and academic research projects. Students gain hands-on experience working with real-world data, using both foundational and advanced techniques — such as machine learning, data engineering, and online experiments — to generate actionable insights and solutions.",
+        "semester": "Spring 2026",
+        "timeslot": "Tuesday & Thursday, 4:00pm - 5:30pm",
+        "location": "South Hall 107",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Data Science", "Social Impact"],
+        "other": "To register, interested students must first email the instructor to arrange a brief meeting. This conversation will ensure that each student has the appropriate skills, interests, and understanding of the course’s collaborative and applied nature."
+    },
+    {
+        "id": 290,
+        "title": "Global Rights Innovation Lab Clinic Seminar",
+        "units": 2,
+        "instructor": "Laurel E. Fletcher",
+        "description": "The Global Rights Innovation Lab Clinic (GRIL) offers students a unique opportunity to integrate digital technologies into legal advocacy. Our particular field of application is human rights, but this approach is broadly transferable to other areas of law and client-facing work in the fields of data science, public policy, and other social sciences.\\nGRIL students utilize data-driven and technological advancements for groundbreaking legal advocacy strategies. Serving organizational clients — grassroots organizations, national and international public interest and human rights groups, GRIL provides advocacy support and strategies to forge new pathways to address human rights challenges. GRIL clients want to harness data analysis, data science, and visualization to advance human rights investigations, litigation before national and international courts, or social justice policy advocacy.",
+        "semester": "Spring 2026",
+        "timeslot": "Wednesday, 3:35pm - 5:26pm",
+        "location": null,
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Data Science", "Law and Policy", "Social Impact"],
+        "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in the seminar (2 units) and the clinic (4 units) is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
+    },
+    {
+        "id": 290,
+        "title": "Global Rights Innovation Lab Clinic",
+        "units": 4,
+        "instructor": ["Laurel E. Fletcher", "Valentina Rozo Angel"],
+        "description": "The Global Rights Innovation Lab Clinic (GRIL) offers students a unique opportunity to integrate digital technologies into legal advocacy. Our particular field of application is human rights, but this approach is broadly transferable to other areas of law and client-facing work in the fields of data science, public policy, and other social sciences.\\nGRIL students utilize data-driven and technological advancements for groundbreaking legal advocacy strategies. Serving organizational clients — grassroots organizations, national and international public interest and human rights groups, GRIL provides advocacy support and strategies to forge new pathways to address human rights challenges. GRIL clients want to harness data analysis, data science, and visualization to advance human rights investigations, litigation before national and international courts, or social justice policy advocacy.",
+        "semester": "Spring 2026",
+        "timeslot": null,
+        "location": null,
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Data Science", "Law and Policy", "Social Impact"],
+        "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in the seminar (2 units) and the clinic (4 units) is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
+    },
+    {
+        "id": 290,
+        "title": "Global Rights Innovation Lab Advanced Clinic",
+        "units": 4,
+        "instructor": ["Laurel E. Fletcher", "Valentina Rozo Angel"],
+        "description": "The Global Rights Innovation Lab Clinic (GRIL) offers students a unique opportunity to integrate digital technologies into legal advocacy. Our particular field of application is human rights, but this approach is broadly transferable to other areas of law and client-facing work in the fields of data science, public policy, and other social sciences.\\nGRIL students utilize data-driven and technological advancements for groundbreaking legal advocacy strategies. Serving organizational clients — grassroots organizations, national and international public interest and human rights groups, GRIL provides advocacy support and strategies to forge new pathways to address human rights challenges. GRIL clients want to harness data analysis, data science, and visualization to advance human rights investigations, litigation before national and international courts, or social justice policy advocacy.",
+        "semester": "Spring 2026",
+        "timeslot": null,
+        "location": null,
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Data Science", "Law and Policy", "Social Impact"],
+        "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in this advanced clinic is for continuing students of the GRIL Clinic and is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
+    },
+    {
         "id": "290M",
         "title": "Lean/Agile Product Management",
         "units": 3,
@@ -330,21 +630,21 @@
         "DS-certification": null,
         "topics": ["Product Development", "Product Management"],
         "other": null
-    }
+    },
     {
-        "id": 
-        "title":
-        "units": 
-        "instructor": 
-        "description": 
-        "semester": 
-        "timeslot": 
-        "location": 
-        "type": 
-        "requirements":
-        "DS-certification":
-        "topics":
-        "other": 
+        "id": 375,
+        "title": "Teaching Assistance Practicum",
+        "units": 2,
+        "instructor": "Kimiko Ryokai",
+        "description": "Discussion, reading, preparation, and practical experience under faculty supervision in the teaching of specific topics within information management and systems. Does not count toward a degree.",
+        "semester": "Spring 2026",
+        "timeslot": "Thursday, 9:00am - 11:00am",
+        "location": "South Hall 107",
+        "type": "Non-Core",
+        "requirements": null,
+        "DS-certification": null,
+        "topics": ["Teaching"],
+        "other": null
     }
     ]   
 }

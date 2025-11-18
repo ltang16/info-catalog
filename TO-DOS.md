@@ -1,15 +1,21 @@
 TO-DO:  
-[ ] 1. create the JSON course catalog  
-> [ ] a. add all courses  
-> [ ] b. add "topics" metadata to all courses (as list) 
-> [ ] c. tag all applied data science certificate courses
+[] create the JSON course catalog  
+> [x] add all courses  
+> [x] add "topics" metadata to all courses (as list) 
+> [x] tag all applied data science certificate courses
+> [ ] add "index" to each course? (Date.now() or UUID)
 
-[ ] 2. build catalog page CSS  
-[ ] 3. add form for course addition to catalog  
-[ ] 4. enable course item editing (ideally in place rather than sending to form at bottom...)  
-[ ] 5. create categorization filtering function and filter buttons
-[ ] 6. create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
-[ ] 7. 800+ word writeup :)  
-[ ] 8. host live demo on Netlify or something similar  
-[x] 9. start Github repo  
-[ ] 10. push all code to Github repo  
+[ ] build webpage structure 
+> [ ] maybe create new component for individual courses and use in overall app body
+> [ ] create new components for course requirement filter buttons and topics filter buttons
+> [ ] create new component for catalog list -- need to pass filtered course list to this! will then pass individual course data to individual course component
+
+[ ] build catalog page CSS  
+[ ] add form for course addition to catalog -- need to permanently edit JSON file
+[ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also permanently edit JSON file
+[ ] create categorization filtering function and filter buttons
+[ ] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
+[ ] 800+ word writeup :)  
+[ ] host live demo on Netlify or something similar  
+[x] start Github repo  
+[ ] push all code to Github repo  
