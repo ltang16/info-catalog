@@ -6,9 +6,9 @@ TO-DO:
 > [ ] add "index" to each course? (Date.now() or UUID)
 
 [ ] build webpage structure 
-> [ ] maybe create new component for individual courses and use in overall app body
+> [x] maybe create new component for individual courses and use in overall app body
 > [ ] create new components for course requirement filter buttons and topics filter buttons
-> [ ] create new component for catalog list -- need to pass filtered course list to this! will then pass individual course data to individual course component
+> [x] create new component for catalog list -- need to pass filtered course list to this! will then pass individual course data to individual course component
 > [ ] add state data for user-given course requirements, DS certificate eligibility, topics, and subsequent filtered catalog (single-select for course reqs and DS cert, and multi-select for topics)
 
 [ ] build catalog page CSS  

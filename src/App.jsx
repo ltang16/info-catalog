@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
+import CatalogList from './components/CatalogList'
 
 function App() {
   // State data for course catalog from JSON file
@@ -16,14 +17,7 @@ function App() {
     <h1 className="catalog-title">UC Berkeley Information Course Catalog, 2025-2026 Academic Year</h1>
     <p className="catalog-details">Welcome to the course catalog! This is a repository of all graduate courses in the 2025-2026 academic year that are available for MIMS students to take.</p>
     <p className="catalog-details">Feel free to filter on the MIMS degree requirements, Applied Data Science certificate eligibility, or even your topics of interest.</p>
-    <ul className="course-list">
-      {catalog && catalog.map((course) => (
-        <li className="course-item">
-          <p className="course-id">Info {course.id}</p>
-          <p className="course-title">{course.title}</p>
-        </li>
-      ))}
-    </ul>
+    <CatalogList catalog={catalog}/>
     </>
   )
 }
