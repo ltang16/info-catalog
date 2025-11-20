@@ -35,19 +35,23 @@ function CatalogCourse({ course }) {
                     <p className="course-description">{desc}</p>
                 ))}
             </div>
+
             {/* If there's other information about this course, add it here in smaller text */}
             {!course.other ? "" : <p className="other">{course.other}</p>}
+
             {/* If this course satisfies one of the MIMS degree requirements, add this section */}
             {!course.requirements ? "" : <div className="course-requirements">
                 <p className="course-requirements-text">Meets the MIMS </p>
                 <p className="course-requirements-req">{course.requirements}</p>
                 <p className="course-requirements-text">degree requirement</p>
             </div>}
+
             {/* If this course can be counted towards the Applied DS certificate, add this section */}
             {!course.DScertification ? "" : <div className="course-DScert">
                 <p className="course-DScert-text">Counts towards the Graduate Certificate in Applied Data Science as a(n) </p>
                 <p className="course-DScert-type">{course.DScertification}</p>
             </div>}
+            
             <div className="course-topics">
                 <p className="course-topics-text">Topics covered: </p>
                 {course.topics.map((topic) => (
