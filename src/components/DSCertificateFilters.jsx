@@ -8,7 +8,7 @@ function DSCertificateFilters({ DScert, onClick }) {
           <input 
             type="checkbox" 
             className={`certificate-filters-btn ${DScert === "DScert" ? 'active': ''}`}
-            onClick={() => onClick('DScert')}
+            onChange={() => onClick('DScert')}
             checked={DScert === 'DScert'}
             />
           All Applicable Courses
@@ -17,7 +17,7 @@ function DSCertificateFilters({ DScert, onClick }) {
           <input 
             type="checkbox" 
             className={`certificate-filters-btn ${DScert === "intro" ? 'active': ''}`}
-            onClick={() => onClick('intro')}
+            onChange={() => onClick('intro')}
             checked={DScert === 'intro'}
             />
           Introductory Data Science
@@ -26,7 +26,7 @@ function DSCertificateFilters({ DScert, onClick }) {
           <input 
             type="checkbox" 
             className={`certificate-filters-btn ${DScert === "amt" ? 'active': ''}`}
-            onClick={() => onClick('amt')}
+            onChange={() => onClick('amt')}
             checked={DScert === 'amt'}
             />
           Analytical Methods and Techniques of Data Science
@@ -35,7 +35,7 @@ function DSCertificateFilters({ DScert, onClick }) {
           <input 
             type="checkbox" 
             className={`certificate-filters-btn ${DScert === "elective" ? 'active': ''}`}
-            onClick={() => onClick('elective')}
+            onChange={() => onClick('elective')}
             checked={DScert === 'elective'}
             />
           Elective

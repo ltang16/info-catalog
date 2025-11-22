@@ -73,7 +73,7 @@
         "type": "Core",
         "requirements": null, 
         "DScertification": null,
-        "topics": ["Programming", "Python"],
+        "topics": ["Programming"],
         "other": null
     },
     {
@@ -283,7 +283,7 @@
         "type": "Non-Core",
         "requirements": "Technology",
         "DScertification": null,
-        "topics": ["Programming", "Web Development", "HTML & CSS", "React"],
+        "topics": ["Programming", "Web Development"],
         "other": null
     },
     {

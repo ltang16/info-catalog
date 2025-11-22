@@ -4,14 +4,14 @@ TO-DO:
 > [x] add "topics" metadata to all courses (as list) 
 > [x] tag all applied data science certificate courses
 > [ ] add "index" to each course? (Date.now() or UUID)
-> [ ] add all Fall 2024 and Spring 2025 courses...
+> [x] add all Fall 2024 and Spring 2025 courses...
 
 [x] build webpage structure 
 > [x] maybe create new component for individual courses and use in overall app body
-> [ ] create new components for course requirement, DS certificate, and topics filter buttons
+> [x] create new components for course requirement, DS certificate, and topics filter buttons
 > [x] create new component for catalog list -- need to pass filtered course list to this! will then pass individual course data to individual course component
 > [x] switch requirement and certificate button types to checkboxes/radio buttons (mix of both to enable only one selection at a time, but also none!) and create toggle click functions!!! removes need for "all Info courses" button and improves aesthetics
-> [ ] add state data for user-given course requirements, DS certificate eligibility, topics, and subsequent filtered catalog (single-select for course reqs and DS cert, and multi-select for topics)
+> [x] add state data for user-given course requirements, DS certificate eligibility, topics, and subsequent filtered catalog (single-select for course reqs and DS cert, and multi-select for topics)
 > [ ] add new component for breadcrumbs? 
 
 [ ] build catalog page CSS  
@@ -19,7 +19,7 @@ TO-DO:
 [ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also permanently edit JSON file
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons
-[ ] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
+[x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
 [ ] add breadcrumbs component and functions?
 [ ] 800+ word writeup :)  
 [ ] host live demo on Netlify or something similar  

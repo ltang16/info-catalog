@@ -8,7 +8,7 @@ function DegreeFilters({ degReq, onClick }) {
           <input 
             type="checkbox" 
             className={`requirement-filters-btn ${degReq === "tech" ? 'active': ''}`}
-            onClick={() => onClick('tech')}
+            onChange={() => onClick('tech')}
             checked={degReq === 'tech'}
             />
           Technology
@@ -17,7 +17,7 @@ function DegreeFilters({ degReq, onClick }) {
           <input 
             type="checkbox" 
             className={`requirement-filters-btn ${degReq === "ssp" ? 'active': ''}`}
-            onClick={() => onClick('ssp')}
+            onChange={() => onClick('ssp')}
             checked={degReq === 'ssp'}
             />
           Social Science and Policy
