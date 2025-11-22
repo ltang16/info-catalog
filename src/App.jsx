@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
+import FilterSidebar from './components/FilterSidebar'
 import CatalogList from './components/CatalogList'
-import DegreeFilters from './components/DegreeFilters'
-import DSCertificateFilters from './components/DSCertificateFilters'
-import TopicFilters from './components/TopicFilters'
 
 function App() {
   // State data for course catalog from JSON file
@@ -47,6 +45,13 @@ function App() {
     }
   }
 
+  // Function to clear ALL applied filters 
+  const clearAllFilters = () => {
+    setDegReq('all')
+    setDSCert('all')
+    setTopics([])
+  }
+
   // Derived state for filtered catalog, based on degree requirement, DS certificate, and topics filters
   // Filtering order doesn't matter since the resulting set of courses will be the same :) 
   const filteredCatalog = catalog.filter((course) => {
@@ -62,7 +67,7 @@ function App() {
     if (DScert === 'elective') return (course.DScertification === "Elective");
     return true;
   }).filter((course) => {
-    // Course topics filter
+    // Course topics filter -- allows multi-select! A course is displayed if it matches at least one filtered topic
     if (topics.length === 0) {
       return true;
     } else {
@@ -78,9 +83,8 @@ function App() {
     <p className="catalog-details">Feel free to filter this course list based on MIMS degree requirements, Applied Data 
       Science certificate eligibility, or even your topics of interest. Core courses, which are required to obtain the 
       MIMS degree, are marked with 🌟.</p>
-    <DegreeFilters degReq={degReq} onClick={handleReqFilter}/>
-    <DSCertificateFilters DScert={DScert} onClick={handleDSCertFilter}/>
-    <TopicFilters catalog={catalog} topics={topics} onClick={toggleTopic}/>
+    <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
+      catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <CatalogList catalog={filteredCatalog}/>
     </>
   )

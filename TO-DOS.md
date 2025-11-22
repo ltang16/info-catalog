@@ -12,6 +12,7 @@ TO-DO:
 > [x] create new component for catalog list -- need to pass filtered course list to this! will then pass individual course data to individual course component
 > [x] switch requirement and certificate button types to checkboxes/radio buttons (mix of both to enable only one selection at a time, but also none!) and create toggle click functions!!! removes need for "all Info courses" button and improves aesthetics
 > [x] add state data for user-given course requirements, DS certificate eligibility, topics, and subsequent filtered catalog (single-select for course reqs and DS cert, and multi-select for topics)
+> [x] build new component for filtering sidebar and create "clear all filters" button + function
 > [ ] add new component for breadcrumbs? 
 
 [ ] build catalog page CSS  
