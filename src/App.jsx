@@ -111,7 +111,7 @@ function App() {
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <CatalogList catalog={filteredCatalog}/>
     <CourseAddForm />
-    <a className="page-top-shortcut" href=".catalog-title" onClick={handleLinkClick}>Return to Top of Page</a>
+    <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
     </>
   )
 }
