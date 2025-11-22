@@ -3,6 +3,7 @@ import axios from 'axios'
 import './App.css'
 import FilterSidebar from './components/FilterSidebar'
 import CatalogList from './components/CatalogList'
+import CourseAddForm from './components/CourseAddForm'
 
 function App() {
   // State data for course catalog from JSON file
@@ -45,7 +46,7 @@ function App() {
     }
   }
 
-  // Function to clear ALL applied filters 
+  // Function to clear ALL applied filters and return to default state (showing all Info courses)
   const clearAllFilters = () => {
     setDegReq('all')
     setDSCert('all')
@@ -75,6 +76,28 @@ function App() {
     }
   })
 
+
+
+  // Tracking next index for course addition -- only enabling addition and not deletion so indices are easier to manage
+  const nextIndex = catalog.length + 1
+
+
+
+  // Function to smoothly scroll to a section when the link is clicked, without reloading the page :)
+  const handleLinkClick = (e) => {
+    e.preventDefault()
+    const targetID = e.target.getAttribute('href')
+    const targetSection = document.querySelector(targetID)
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
+
+
   return (
     <>
     <h1 className="catalog-title">UC Berkeley Information Course Catalog</h1>
@@ -83,9 +106,12 @@ function App() {
     <p className="catalog-details">Feel free to filter this course list based on MIMS degree requirements, Applied Data 
       Science certificate eligibility, or even your topics of interest. Core courses, which are required to obtain the 
       MIMS degree, are marked with 🌟.</p>
+    <a className="add-form-shortcut" href="#course-add-section" onClick={handleLinkClick}>Add a New Course</a>
     <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <CatalogList catalog={filteredCatalog}/>
+    <CourseAddForm />
+    <a className="page-top-shortcut" href=".catalog-title" onClick={handleLinkClick}>Return to Top of Page</a>
     </>
   )
 }

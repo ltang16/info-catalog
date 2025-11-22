@@ -20,7 +20,7 @@ function CatalogCourse({ course }) {
     }
 
     return (
-        <li className="course-item">
+        <li className="course-item" id={course.index}>
             <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id}: {course.title}</p>
             <p className="course-units">{course.units} Units</p>
             <p className="course-instructor">Instructor(s): {instructors}</p>

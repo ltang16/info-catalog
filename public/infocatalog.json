@@ -2,6 +2,7 @@
     "catalog":
     [
     {
+        "index": 1,
         "id": 201,
         "title": "Research Design and Applications for Data and Analysis",
         "units": 3,
@@ -17,6 +18,7 @@
         "other": "The Fall 2025 offering of this course will be in-person and the Spring 2026 offering will be online."
     },
     {
+        "index": 2,
         "id": 202,
         "title": "Information Organization and Retrieval",
         "units": 3,
@@ -32,6 +34,7 @@
         "other": null
     },
     {
+        "index": 3,
         "id": 203,
         "title": "Social Issues of Information",
         "units": 3,
@@ -47,6 +50,7 @@
         "other": null
     },
     {
+        "index": 4,
         "id": 205,
         "title": "Information Law and Policy",
         "units": 3,
@@ -62,6 +66,7 @@
         "other": null
     },
     {
+        "index": 5,
         "id": "206A",
         "title": "Introduction to Programming and Computation",
         "units": 2,
@@ -77,6 +82,7 @@
         "other": null
     },
     {
+        "index": 6,
         "id": "206B",
         "title": "Introduction to Data Structures and Analytics",
         "units": 2,
@@ -92,6 +98,7 @@
         "other": null
     },
     {
+        "index": 7,
         "id": 213,
         "title": "Introduction to User Experience Design",
         "units": 4,
@@ -107,6 +114,7 @@
         "other": "Thanks for your interest in Info 213. Since this is a graduate level class in the School of Information, there's only space for a select number of undergraduates and students from other departments. If interested in enrolling in this course, fill out this form to express interest in enrolling in this course - https://forms.gle/e4EhQPbjy3LSyXU58 The deadline to submit the application form is Friday, July 25. Candidates who submitted the form will receive notification if enrolled by Friday, August 15. If you do not receive any communication about enrollment by this date, you will not be enrolled in INFO 213."
     },
     {
+        "index": 8,
         "id": 214,
         "title": "User Experience Research",
         "units": 3,
@@ -122,6 +130,7 @@
         "other": "All non-School of Information students must fill out this form for consideration: https://docs.google.com/forms/d/e/1FAIpQLSdv2jUh1LSePCZYCDuO6vIUv4lPENfMI4nDMKvIYe7A8Y5TFg/viewform?usp=header"
     },
     {
+        "index": 9,
         "id": 215,
         "title": "Product Design Studio",
         "units": 3,
@@ -137,6 +146,7 @@
         "other": null
     },
     {
+        "index": 10,
         "id": 218,
         "title": "Concepts of Information",
         "units": 3,
@@ -152,6 +162,7 @@
         "other": null
     },
     {
+        "index": 11,
         "id": 225,
         "title": "Foundations of Leadership and Influence in Tech",
         "units": 3,
@@ -167,6 +178,7 @@
         "other": null
     },
     {
+        "index": 12,
         "id": 230,
         "title": "Cultural Analytics: Theories and Methods",
         "units": 3,
@@ -182,6 +194,7 @@
         "other": null
     },
     {
+        "index": 13,
         "id": 231,
         "title": "Decisions and Algorithms",
         "units": 3,
@@ -197,6 +210,7 @@
         "other": null
     },
     {
+        "index": 14,
         "id": 233,
         "title": "Social Psychology and Information Technology",
         "units": 3,
@@ -212,6 +226,7 @@
         "other": null
     },
     {
+        "index": 15,
         "id": 239,
         "title": "Technology and Delegation",
         "units": 3,
@@ -227,6 +242,7 @@
         "other": null
     },
     {
+        "index": 16,
         "id": 241,
         "title": "Experiments and Causal Inference",
         "units": 3,
@@ -242,6 +258,7 @@
         "other": null
     },
     {
+        "index": 17,
         "id": 247,
         "title": "Information Visualization and Presentation",
         "units": "3 - 4",
@@ -257,6 +274,7 @@
         "other": "Unit Count & Additional Lab: Students taking the course for 3 units -- 3 hours of lecture per week only; no additional lab.; for MIMS students, the 3-unit course does not satisfy the MIMS Technology Requirement. Students taking the course for 4 units -- 3 hours of lecture per week, 1 additional hour of lab per week; for MIMS students: the 4-unit course does satisfy the MIMS Technology Requirement."
     },
     {
+        "index": 18,
         "id": 251,
         "title": "Applied Machine Learning",
         "units": 4,
@@ -272,6 +290,7 @@
         "other": null
     },
     {
+        "index": 19,
         "id": "253A",
         "title": "Front-End Web Architecture",
         "units": 3,
@@ -287,6 +306,7 @@
         "other": null
     },
     {
+        "index": 20,
         "id": "253B",
         "title": "Back-End Web Architecture",
         "units": 3,
@@ -302,6 +322,7 @@
         "other": null
     },
     {
+        "index": 21,
         "id": 255,
         "title": "Privacy Engineering",
         "units": 3,
@@ -317,6 +338,7 @@
         "other": null
     },
     {
+        "index": 22,
         "id": 256,
         "title": "Applied Natural Language Processing",
         "units": 3,
@@ -332,6 +354,7 @@
         "other": null
     },
     {
+        "index": 23,
         "id": 258,
         "title": "Data Engineering",
         "units": 4,
@@ -347,6 +370,7 @@
         "other": null
     },
     {
+        "index": 24,
         "id": 259,
         "title": "Natural Language Processing",
         "units": 4,
@@ -362,6 +386,7 @@
         "other": null
     },
     {
+        "index": 25,
         "id": "C262",
         "title": "Theory and Practice of Tangible User Interfaces",
         "units": 4,
@@ -377,6 +402,7 @@
         "other": null
     },
     {
+        "index": 26,
         "id": "C265",
         "title": "Interface Aesthetics",
         "units": 3,
@@ -392,6 +418,7 @@
         "other": null
     },
     {
+        "index": 27,
         "id": "271B",
         "title": "Quantitative Research Methods for Information Systems and Management",
         "units": 3,
@@ -407,6 +434,7 @@
         "other": null
     },
     {
+        "index": 28,
         "id": 272,
         "title": "Qualitative Research Methods for Information Systems and Management",
         "units": 3,
@@ -422,6 +450,7 @@
         "other": null
     },
     {
+        "index": 29,
         "id": 288,
         "title": "Big Data and Development",
         "units": 3,
@@ -437,6 +466,7 @@
         "other": null
     },
     {
+        "index": 30,
         "id": 289,
         "title": "Public Interest Cybersecurity: The Cybersecurity Clinic Practicum",
         "units": 3,
@@ -452,6 +482,7 @@
         "other": "Enrollment into this course is by application ONLY. Please submit the online application to apply for course enrollment: https://ischool.berkeley.edu/cc-app"
     },
     {
+        "index": 31,
         "id": 290,
         "title": "Cultural Analytics",
         "units": 3,
@@ -467,6 +498,7 @@
         "other": null
     },
     {
+        "index": 32,
         "id": 290,
         "title": "Behavioral Science and Public Policy",
         "units": 3,
@@ -482,6 +514,7 @@
         "other": null
     },
     {
+        "index": 33,
         "id": 290,
         "title": "Storytelling for Your UX Portfolio",
         "units": 2,
@@ -497,6 +530,7 @@
         "other": null
     },
     {
+        "index": 34,
         "id": 290,
         "title": "Tech Policy Practicum",
         "units": 2,
@@ -512,6 +546,7 @@
         "other": null
     },
     {
+        "index": 35,
         "id": 290,
         "title": "Climate, People, and Informatics",
         "units": 3,
@@ -527,6 +562,7 @@
         "other": null
     },
     {
+        "index": 36,
         "id": 290,
         "title": "Playful Design & Gamification",
         "units": 2,
@@ -542,6 +578,7 @@
         "other": "Learning goals include the following: -Definitions, history, and fields of application of playful design and gamification -Models for players and development (e.g., Bartle, OctalysisFramework, BrainHex) -Ethical / moral implications -Creating a visual prototype in a group setting Prerequisites include scientific work (qualitative and quantitative methods); some experience with design tools like Canva, Figma, and Adobe XD. Exam-type will be a seminar paper."
     },
     {
+        "index": 37,
         "id": 290,
         "title": "Knowledge Representation for Intelligent Applications",
         "units": 3,
@@ -557,6 +594,7 @@
         "other": "This course is for I School MIMS & PhD students only. NOTE: This course will have live online class sessions. Students are expected to be able attend the course online during the scheduled day/time. There may be a few in-person sessions where the instructor will be on campus but in-person attendance will not be required. Prerequisites: INFO 206A: Introduction to Programming Students should have a basic knowledge of Python. Exercises will involve modifying program parameters and measuring performance for various datasets."
     },
     {
+        "index": 38,
         "id": 290,
         "title": "Building Data Products for Public Impact",
         "units": 3,
@@ -572,6 +610,7 @@
         "other": "Students must have at least one semester of training in statistics, machine learning, or data science. To register, interested students must first email the instructor to arrange a brief meeting. This conversation will ensure that each student has the appropriate skills, interests, and understanding of the course’s collaborative and applied nature."
     },
     {
+        "index": 39,
         "id": 290,
         "title": "Designing Future Systems",
         "units": 3,
@@ -587,6 +626,7 @@
         "other": "It's strongly recommended that students have a solid understanding of user experience design fundamentals, such as observation, prototyping, and testing, before enrolling in this course. This foundation can be acquired through courses such as: INFO 213: Introduction to User Experience Design, INFO C262: Theory and Practice of Tangible User Interfaces, INFO 215: Product Design Studio. Undergraduates will not be accepted into this course."
     },
     {
+        "index": 40,
         "id": 290,
         "title": "UX for AI",
         "units": 2,
@@ -602,6 +642,7 @@
         "other": "It's strongly recommended that students have a solid understanding of user experience design fundamentals, such as observation, prototyping, and testing, before enrolling in this course. This foundation can be acquired through courses such as INFO 213: Introduction to User Experience Design, INFO 215: Product Design Studio, and INFO C262: Theory and Practice of Tangible User Interfaces"
     },
     {
+        "index": 41,
         "id": 290,
         "title": "Product, Design, and Leadership Workshop",
         "units": 2,
@@ -617,6 +658,7 @@
         "other": "Enrollment is limited to students with an ongoing project or leadership role which will serve as the basis for a presentation for class discussion."
     },
     {
+        "index": 42,
         "id": 290,
         "title": "Fundamentals of Generative AI",
         "units": 3,
@@ -632,6 +674,7 @@
         "other": "Graduate students only. Prerequisites include INFO 206A & 206B or equivalent Python programming proficiency. All assignments and notebooks will be based on Python."
     },
     {
+        "index": 43,
         "id": 290,
         "title": "Applied Generative AI ad Large Language Models",
         "units": 3,
@@ -647,6 +690,7 @@
         "other": "This course will have live online class sessions. Students are expected to be able attend the course online during the scheduled day/time. Prerequisites: INFO 206A: Introduction to Programming and INFO 206B: Introduction to Data Structures"
     },
     {
+        "index": 44,
         "id": 290,
         "title": "Interaction Design",
         "units": 2,
@@ -662,6 +706,7 @@
         "other": null
     },
     {
+        "index": 45,
         "id": 290,
         "title": "Public Interest Technology Clinic",
         "units": 3,
@@ -677,6 +722,7 @@
         "other": "To register, interested students must first email the instructor to arrange a brief meeting. This conversation will ensure that each student has the appropriate skills, interests, and understanding of the course’s collaborative and applied nature."
     },
     {
+        "index": 46,
         "id": 290,
         "title": "Political Visions, Design, and Governance",
         "units": 3,
@@ -692,6 +738,7 @@
         "other": null
     },
     {
+        "index": 47,
         "id": 290,
         "title": "Global Rights Innovation Lab Clinic Seminar",
         "units": 2,
@@ -707,6 +754,7 @@
         "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in the seminar (2 units) and the clinic (4 units) is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
     },
     {
+        "index": 48,
         "id": 290,
         "title": "Global Rights Innovation Lab Clinic",
         "units": 4,
@@ -722,6 +770,7 @@
         "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in the seminar (2 units) and the clinic (4 units) is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
     },
     {
+        "index": 49,
         "id": 290,
         "title": "Global Rights Innovation Lab Advanced Clinic",
         "units": 4,
@@ -737,6 +786,7 @@
         "other": "This course is targeted for those with a background in data analysis and/or interest in human rights and who have a passion for creativity and are eager to embrace experimentation. At the GRIL Clinic, unleash your imagination and analytical prowess to craft innovative solutions for the future of legal advocacy, developing new approaches in justice and technology. Enrollment in this advanced clinic is for continuing students of the GRIL Clinic and is by permission of the instructor. Application to the clinic: https://www.law.berkeley.edu/experiential/clinics/apply-to-the-clinics/"
     },
     {
+        "index": 50,
         "id": "290M",
         "title": "Lean/Agile Product Management",
         "units": 3,
@@ -752,6 +802,7 @@
         "other": null
     },
     {
+        "index": 51,
         "id": "290S",
         "title": "Introduction to Politics of Information",
         "units": 3,
@@ -767,6 +818,7 @@
         "other": null
     },
     {
+        "index": 52,
         "id": "290T",
         "title": "Biosensory Computing",
         "units": "2 - 3",
@@ -782,6 +834,7 @@
         "other": "Prerequisite: INFO 206A or equivalent Python / programming course."
     },
     {
+        "index": 53,
         "id": "290T",
         "title": "Computer Vision",
         "units": "3",
@@ -797,6 +850,7 @@
         "other": null
     },
     {
+        "index": 54,
         "id": "296A",
         "title": "Ludology: Critical Study of Games, Game Design, and Culture",
         "units": 2,
@@ -812,6 +866,7 @@
         "other": "Please note that enrollment is contingent on instructor approval; interested students should waitlist for the course."
     },
     {
+        "index": 55,
         "id": "296A",
         "title": "Information Access Seminar",
         "units": 3,
@@ -827,6 +882,7 @@
         "other": "Instructor consent required for non-INFO students."
     },
     {
+        "index": 56,
         "id": 375,
         "title": "Teaching Assistance Practicum",
         "units": 2,
