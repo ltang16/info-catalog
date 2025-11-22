@@ -15,19 +15,27 @@ function App() {
 
   // State data for currently-active MIMS degree requirement filter -- 'all Info courses' by default
   const [degReq, setDegReq] = useState('all')
-  // Function to change active degree requirement filter according to which filter button is clicked
+  // Function to toggle active degree requirement filter according to which filter button is clicked
   const handleReqFilter = (category) => {
-    setDegReq(category)
+    if (degReq !== category) {
+      setDegReq(category);
+    } else {
+      setDegReq('all');
+    }
   }
 
   // State data for currently-active DS certificate course filter -- 'all Info courses' by default
   const [DScert, setDSCert] = useState('all')
-  // Function to change active DS certificate course type according to which button is clicked
+  // Function to toggle active DS certificate course type according to which button is clicked
   const handleDSCertFilter = (category) => {
-    setDSCert(category)
+    if (DScert !== category) {
+      setDSCert(category);
+    } else {
+      setDSCert('all');
+    }
   }
 
-  // Filter course catalog based on active degree requirement filter (derived state)
+  // Derived state for filtered catalog, based on degree requirement, DS certificate, and topics filters
   const filteredCatalog = catalog.filter((course) => {
     if (degReq === 'tech') return (course.requirements === "Technology");
     if (degReq === 'ssp') return (course.requirements === "Social Science and Policy");
