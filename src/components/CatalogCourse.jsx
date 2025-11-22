@@ -48,10 +48,10 @@ function CatalogCourse({ course }) {
 
             {/* If this course can be counted towards the Applied DS certificate, add this section */}
             {!course.DScertification ? "" : <div className="course-DScert">
-                <p className="course-DScert-text">Counts towards the Graduate Certificate in Applied Data Science as a(n) </p>
+                <p className="course-DScert-text">Counts towards the Graduate Certificate in Applied Data Science as an </p>
                 <p className="course-DScert-type">{course.DScertification}</p>
             </div>}
-            
+
             <div className="course-topics">
                 <p className="course-topics-text">Topics covered: </p>
                 {course.topics.map((topic) => (
