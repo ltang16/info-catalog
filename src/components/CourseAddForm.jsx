@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function CourseAddForm({ catalog }) {
+function CourseAddForm({ catalog, onAddCourse }) {
 
   // State for form data, with default values for instructor, timeslot, location, requirements, DS certification, and other
   const [formData, setFormData] = useState({
@@ -107,12 +107,6 @@ function CourseAddForm({ catalog }) {
   // Handle form submission -- error validation, submission, adding to catalog :)
   const handleSubmit = (e) => {
     // Prevent page from reloading on submission
-    // TO-DO: when a new course is added or a course is edited, need to add useEffect() in App.jsx to change catalog and 
-        // update the contents immediately -- when [catalog] dependency changes??? 
-        // ALSO: 
-            // need to parse multiple instructor names... and use 'Staff' if data field is null
-            // need to parse topics list, comma-delimited
-            // non-required fields (instructor, timeslot, location, requirements, DScertification, other) must be set to null in when being added to the catalog!!!
     e.preventDefault()
 
     // Validate all form fields
@@ -128,9 +122,13 @@ function CourseAddForm({ catalog }) {
     if (!formData.units) {
         newErrors.units = "Unit count is required."   
     } else if (formData.units.length > 1) {
-        const unitsCheck = formData.units.split(' - ').map(n => (parseInt(n) >= 1 && parseInt(n) <= 4))
-        if (unitsCheck.includes(false)) {
-            newErrors.units = "Unit count must be between 1 and 4."
+        const unitsAlphCheck = formData.units.split('').map(c => {return /[a-zA-Z]/.test(c)})
+        if (unitsAlphCheck.includes(true)) {
+            newErrors.units = "Unit count must be a numeric value only."
+        }
+        const unitsNumCheck = formData.units.split(' - ').map(n => (parseInt(n) >= 1 && parseInt(n) <= 4))
+        if (unitsNumCheck.includes(false)) {
+            newErrors.units = "Unit count must be a numeric value between 1 and 4."
         }
     }
     if (!formData.description.trim() || !formData.description) {
@@ -154,7 +152,7 @@ function CourseAddForm({ catalog }) {
 
     // Otherwise, the form is valid and we can submit it :) show a success message, then clear the form after a few seconds
     setSuccessMessage('The course has been added to the catalog. Thank you for your submission!')
-    // TO-DO: add actual catalog update function here! 
+    onAddCourse(formData)
     setFormData({
         index: catalog.length + 1,
         id: '',

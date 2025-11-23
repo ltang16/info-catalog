@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import './App.css'
+import jsonData from './data/infocatalog.json'
 import FilterSidebar from './components/FilterSidebar'
 import CatalogList from './components/CatalogList'
 import CourseAddForm from './components/CourseAddForm'
@@ -8,12 +8,12 @@ import CourseAddForm from './components/CourseAddForm'
 
 
 function App() {
-  // State data for course catalog from JSON file
-  const [catalog, setCatalog] = useState([])
-  // When the page loads, pull the data into the catalog state data from the JSON file
-  useEffect(() => {
-    axios.get("/infocatalog.json").then((res) => {setCatalog(res.data.catalog);});
-  }, []);
+  // State data for course catalog from JSON file -- use catalog data from localStorage if it's there, or use
+  // the data in the JSON file
+  const [catalog, setCatalog] = useState(
+    JSON.parse(localStorage.getItem("info-catalog")) ||
+    jsonData.catalog
+  )
 
   // State data for MIMS degree requirement filter -- 'all Info courses' by default
   const [degReq, setDegReq] = useState('all')
@@ -93,6 +93,48 @@ function App() {
     }
   }
 
+  
+
+  // Function to add course data from form component to catalog! 
+  const addCourse = (formData) => {
+    // Handle 0 or multiple instructors
+    if (!formData.instructor) {
+      formData.instructor = "Staff"
+    } else if (formData.instructor.includes(',')) {
+      const instructorList = formData.instructor.split(', ')
+      formData.instructor = instructorList
+    }
+    // Handle empty values for optional course attributes
+    if (!formData.timeslot) {
+      formData.timeslot = null
+    }
+    if (!formData.location) {
+      formData.location = null
+    }
+    if (!formData.requirements) {
+      formData.requirements = null
+    }
+    if (!formData.DScertification) {
+      formData.DScertification = null
+    }
+    if (!formData.other) {
+      formData.other = null
+    }
+    // Parse topics list -- always needs to be in list format
+    const topicsList = formData.topics.split(', ')
+    formData.topics = topicsList
+    // Update the catalog with the new course! :) new additions will always be at the end of the JSON file
+    // But the catalog will be sorted!
+    setCatalog([...catalog, formData])
+  }
+
+  // Since I don't have a database to store the JSON file in, I'll use localStorage to keep track of the user's added 
+  // and edited courses, which triggers every time the catalog state data changes
+  // The existing JSON catalog file in the data folder will serve as a foundation for the catalog :)
+  useEffect(() => {
+    localStorage.setItem("info-catalog", JSON.stringify(catalog));
+  }, [catalog])
+
 
 
   return (
@@ -107,7 +149,7 @@ function App() {
     <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <CatalogList catalog={filteredCatalog}/>
-    <CourseAddForm catalog={catalog}/>
+    <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
     <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
     </>
   )

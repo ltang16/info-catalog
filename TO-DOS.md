@@ -13,11 +13,11 @@ TO-DO:
 > [x] switch requirement and certificate button types to checkboxes/radio buttons (mix of both to enable only one selection at a time, but also none!) and create toggle click functions!!! removes need for "all Info courses" button and improves aesthetics
 > [x] add state data for user-given course requirements, DS certificate eligibility, topics, and subsequent filtered catalog (single-select for course reqs and DS cert, and multi-select for topics)
 > [x] build new component for filtering sidebar and create "clear all filters" button + function
-> [ ] build new component for course addition form w/ form submission, error handling, etc. -- should change and post existing JSON file!
+> [x] build new component for course addition form w/ form submission, error handling, etc. -- stores changes to catalog in localStorage!
 >> [x] 1. form data field
 >> [x] 2. handleChange function
 >> [x] 3. form submission function
->> [ ] 4. add to catalog + post JSON function -- add new useEffect in App.jsx to "reload" catalog when it changes
+>> [x] 4. add to catalog function + save to localStorage effect
 >> [x] also add "shortcut" button at top of page since form will be at bottom; jump w/ smooth scroll :)
 >> [x] add "return to top" button at bottom of page, also with smooth scroll :)
 
