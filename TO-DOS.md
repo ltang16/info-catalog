@@ -21,12 +21,12 @@ TO-DO:
 >> [x] also add "shortcut" button at top of page since form will be at bottom; jump w/ smooth scroll :)
 >> [x] add "return to top" button at bottom of page, also with smooth scroll :)
 
-> [ ] add numerical, then alphabetical ordering for catalog object array after it loads... 
+> [x] sort filtered catalog in alphabetical order based on course ID, then course title 
 > [ ] add new component for breadcrumbs? 
 
 [ ] build catalog page CSS  
-[ ] add form for course addition to catalog -- need to permanently edit JSON file
-[ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also permanently edit JSON file
+[x] add form for course addition to catalog -- store updated catalog in localStorage
+[ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons

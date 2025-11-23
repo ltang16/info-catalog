@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import jsonData from './data/infocatalog.json'
 import FilterSidebar from './components/FilterSidebar'
@@ -55,7 +55,7 @@ function App() {
     setTopics([])
   }
 
-  // Derived state for filtered catalog, based on degree requirement, DS certificate, and topics filters
+  // Derived state for filtered and sorted catalog, based on degree requirement, DS certificate, and topics filters
   // Filtering order doesn't matter since the resulting set of courses will be the same :) 
   const filteredCatalog = catalog.filter((course) => {
     // Degree requirements filter
@@ -76,7 +76,10 @@ function App() {
     } else {
       return topics.some(t => course.topics.includes(t));
     }
-  })
+  }).sort((a, b) =>
+    // Finally, sort the filtered catalog array in ascending order by course ID and then course title :)
+    String(a.id).localeCompare(String(b.id)) || String(a.title).localeCompare(String(b.title))
+  )
 
 
 
