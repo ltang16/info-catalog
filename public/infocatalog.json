@@ -22,7 +22,7 @@
         "id": 202,
         "title": "Information Organization and Retrieval",
         "units": 3,
-        "instructor": ["Aditya Parameswaran (Fall 2024", "Marti Hearst (Fall 2025)"],
+        "instructor": ["Aditya Parameswaran (Fall 2024)", "Marti Hearst (Fall 2025)"],
         "description": "15 weeks; 3 hours of lecture per week. This course introduces the intellectual foundations of information organization and retrieval: conceptual modeling, semantic representation, vocabulary and metadata design, classification, and standardization, as well as information retrieval practices, technology, and applications, including computational processes for analyzing information in both textual and non-textual formats.",
         "semester": ["Fall 2024", "Fall 2025"],
         "timeslot": ["Tuesday & Thursday, 2:00 pm - 3:30pm", "Tuesday & Thursday, 2:00pm - 3:30pm"],
@@ -897,5 +897,5 @@
         "topics": ["Teaching"],
         "other": null
     }
-    ]   
+    ]
 }

@@ -10,7 +10,7 @@ function TopicFilters({ catalog, topics, onClick }) {
         <p className="topic-filters-text">Course topics: (If multiple are selected, each displayed course will match at 
             least one selected topic)</p>
         {allTopics && allTopics.map((topic) => (
-            <label>
+            <label className="topic-filter-btn-text">
                 <input 
                     type="checkbox"
                     className={`topic-filter-btn ${topics.includes(topic) ? 'active' : ''}`}

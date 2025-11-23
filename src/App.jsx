@@ -5,6 +5,8 @@ import FilterSidebar from './components/FilterSidebar'
 import CatalogList from './components/CatalogList'
 import CourseAddForm from './components/CourseAddForm'
 
+
+
 function App() {
   // State data for course catalog from JSON file
   const [catalog, setCatalog] = useState([])
@@ -78,11 +80,6 @@ function App() {
 
 
 
-  // Tracking next index for course addition -- only enabling addition and not deletion so indices are easier to manage
-  const nextIndex = catalog.length + 1
-
-
-
   // Function to smoothly scroll to a section when the link is clicked, without reloading the page :)
   const handleLinkClick = (e) => {
     e.preventDefault()
@@ -110,7 +107,7 @@ function App() {
     <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <CatalogList catalog={filteredCatalog}/>
-    <CourseAddForm />
+    <CourseAddForm catalog={catalog}/>
     <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
     </>
   )
