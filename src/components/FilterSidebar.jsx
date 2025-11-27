@@ -7,6 +7,7 @@ function FilterSidebar({ degReq, handleReqFilter, DScert, handleDSCertFilter, ca
 
   return (
     <div className="filter-sidebar">
+      <p className="filter-sidebar-header">Course Filters</p>
         <DegreeFilters degReq={degReq} onClick={handleReqFilter}/>
         <DSCertificateFilters DScert={DScert} onClick={handleDSCertFilter}/>
         <TopicFilters catalog={catalog} topics={topics} onClick={toggleTopic}/>

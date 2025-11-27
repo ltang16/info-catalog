@@ -142,18 +142,22 @@ function App() {
 
   return (
     <>
-    <h1 className="catalog-title">UC Berkeley Information Course Catalog</h1>
-    <p className="catalog-details">Welcome to the School of Information course catalog! This is a repository of all 
-      graduate courses from the 2024-2025 and 2025-2026 academic years that are available for MIMS students to take.</p>
-    <p className="catalog-details">Feel free to filter this course list based on MIMS degree requirements, Applied Data 
-      Science certificate eligibility, or even your topics of interest. Core courses, which are required to obtain the 
-      MIMS degree, are marked with 🌟.</p>
-    <a className="add-form-shortcut" href="#course-add-section" onClick={handleLinkClick}>Add a New Course</a>
+    <div className="header-section">
+      <h1 className="catalog-title">UC Berkeley Information Course Catalog</h1>
+      <p className="catalog-details">Welcome to the School of Information course catalog! This is a repository of all 
+        graduate courses from the 2024-2025 and 2025-2026 academic years that are available for MIMS students to take.</p>
+      <p className="catalog-details">Feel free to filter this course list based on MIMS degree requirements, Applied Data 
+        Science certificate eligibility, or even your topics of interest. Core courses, which are required to obtain the 
+        MIMS degree, are marked with 🌟.</p>
+      <a className="add-form-shortcut" href="#course-add-section" onClick={handleLinkClick}>Add a New Course</a>
+    </div>
     <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
-    <CatalogList catalog={filteredCatalog}/>
-    <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
-    <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
+    <div className="main-content">
+      <CatalogList catalog={filteredCatalog}/>
+      <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
+      <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
+    </div>
     </>
   )
 }
