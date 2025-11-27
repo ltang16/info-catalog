@@ -2,6 +2,7 @@ function DSCertificateFilters({ DScert, onClick }) {
   return (
     <div className="certificate-filters">
         <p className="certificate-filters-text">Applied Data Science Certificate course type:</p>
+        <p className="certificate-filters-text-adl">(1 selection permitted)</p>
         {/* Using hybrid of radio buttons and checkboxes -- I don't want to allow multiple selections but I 
             do want to allow no selections (all courses shown) */}
         <label className="certificate-filters-btn-text">

@@ -2,6 +2,7 @@ function DegreeFilters({ degReq, onClick }) {
   return (
     <div className="requirement-filters">
         <p className="requirement-filters-text">MIMS degree requirement type:</p>
+        <p className="requirement-filters-text-adl">(1 selection permitted)</p>
         {/* Using hybrid of radio buttons and checkboxes -- I don't want to allow multiple selections but I 
             do want to allow no selections (all courses shown) */}
         <label className="requirement-filters-btn-text">

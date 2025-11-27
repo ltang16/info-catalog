@@ -21,6 +21,67 @@
   padding: 10px;
 }
 
+.filter-sidebar-header {
+  font-weight: bold;
+  font-size: 14pt;
+  color: #060081;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.requirement-filters, .certificate-filters, .topic-filters {
+  margin-left: 10px;
+}
+
+.requirement-filters-text, .certificate-filters-text, .topic-filters-text {
+  margin-bottom: 5px;
+}
+
+.requirement-filters-text-adl, .certificate-filters-text-adl, .topic-filters-text-adl {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-size: 9pt;
+}
+
+.requirement-filters-btn-text, .certificate-filters-btn-text, .topic-filters-btn-text {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.requirement-filters-btn, .certificate-filters-btn, .topic-filters-btn {
+  margin-right: 10px;
+  min-width: 15px;
+  height: 15px;
+  cursor: pointer;
+  appearance: none;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 2.5px;
+}
+
+.requirement-filters-btn:hover, .certificate-filters-btn:hover, .topic-filters-btn:hover {
+  background-color: rgba(6, 0, 129, 0.7);
+}
+
+.requirement-filters-btn:checked, .certificate-filters-btn:checked, .topic-filters-btn:checked {
+  background-color: #060081;
+  outline: solid 2px white;
+  outline-offset: -3px;
+  border: solid 1px #060081;
+}
+
+.clear-filters-btn {
+  margin-top: 15px;
+  margin-left: 90px;
+  background-color: #060081;
+}
+
+.clear-filters-btn:disabled {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* <============== Header styling ==============> */
 
 .header-section {
@@ -105,7 +166,7 @@
 .course-topics {
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 5px 0px 10px;
   padding: 0px;
 }
 

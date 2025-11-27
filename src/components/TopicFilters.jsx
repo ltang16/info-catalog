@@ -7,13 +7,14 @@ function TopicFilters({ catalog, topics, onClick }) {
 
   return (
     <div className="topic-filters">
-        <p className="topic-filters-text">Course topics: (If multiple are selected, each displayed course will match at 
-            least one selected topic)</p>
+        <p className="topic-filters-text">Course topics:</p>
+        <p className="topic-filters-text-adl">(Multiple selections permitted; if multiple topics are selected, each displayed 
+            course will match at least one selected topic)</p>
         {allTopics && allTopics.map((topic) => (
-            <label className="topic-filter-btn-text">
+            <label className="topic-filters-btn-text">
                 <input 
                     type="checkbox"
-                    className={`topic-filter-btn ${topics.includes(topic) ? 'active' : ''}`}
+                    className={`topic-filters-btn ${topics.includes(topic) ? 'active' : ''}`}
                     onChange={() => onClick(topic)}
                     checked={topics.includes(topic)}
                 />
