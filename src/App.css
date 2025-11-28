@@ -52,6 +52,7 @@
   margin-left: 5px;
   margin-bottom: 5px;
   font-size: 11pt;
+  cursor: pointer;
 }
 
 .requirement-filters-btn, .certificate-filters-btn, .topic-filters-btn {
@@ -113,13 +114,14 @@
   margin-left: 20px;
   margin-bottom: 20px;
   color: #060081;
+  cursor: pointer;
 }
 
 .add-form-shortcut:hover {
   color: rgba(6, 0, 129, 0.7);
 }
 
-/* <============== Main content section styling =============> */
+/* <============== Main content section / miscellaneous styling =============> */
 
 .main-content {
   grid-area: main;
@@ -127,6 +129,7 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .catalog-list {
@@ -136,15 +139,28 @@
   flex-direction: column;
   align-items: center;
   padding-inline-start: 0px;
+  width: 100%;
 }
 
 .catalog-description {
   width: 90%;
 }
 
+.page-top-shortcut {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 0px black;
+}
+
+/* <============= Course addition form styling ============> */
+
 #course-add-section {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 25px;
   width: 90%;
   border-top: solid 1px black;
 }
@@ -201,6 +217,7 @@
   margin-right: 30px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .form-btn {

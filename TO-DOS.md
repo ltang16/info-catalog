@@ -20,12 +20,14 @@ TO-DO:
 >> [x] 4. add to catalog function + save to localStorage effect
 >> [x] also add "shortcut" button at top of page since form will be at bottom; jump w/ smooth scroll :)
 >> [x] add "return to top" button at bottom of page, also with smooth scroll :)
->>> [ ] change "return to top" button to be sticky (bottom right) and up arrow symbol?
+>>> [x] change "return to top" button to be sticky (bottom right) and up arrow symbol?
 
 > [x] sort filtered catalog in alphabetical order based on course ID, then course title 
 > [ ] add new component for breadcrumbs? 
 
-[ ] build full catalog page CSS AND responsive styling for smaller screens???
+[x] build full catalog page CSS -- individual course item component, filter sidebar, header, course addition form
+> [ ] add responsive styling for smaller screens???
+
 [x] add form for course addition to catalog -- store updated catalog in localStorage
 [ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
 [x] create MIMs requirements filtering function and filter buttons

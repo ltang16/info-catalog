@@ -4,6 +4,8 @@ import jsonData from './data/infocatalog.json'
 import FilterSidebar from './components/FilterSidebar'
 import CatalogList from './components/CatalogList'
 import CourseAddForm from './components/CourseAddForm'
+import { LuArrowUpToLine } from "react-icons/lu"
+
 
 
 
@@ -86,7 +88,7 @@ function App() {
   // Function to smoothly scroll to a section when the link is clicked, without reloading the page :)
   const handleLinkClick = (e) => {
     e.preventDefault()
-    const targetID = e.target.getAttribute('href')
+    const targetID = e.currentTarget.getAttribute('href')
     const targetSection = document.querySelector(targetID)
     if (targetSection) {
       targetSection.scrollIntoView({
@@ -140,6 +142,11 @@ function App() {
 
 
 
+  // Added styling for "return to top of page" icon :)
+  const iconStyleRTT = {color: "#060081", height: "30px", width: "30px"}
+
+
+
   return (
     <>
     <div className="header-section">
@@ -156,7 +163,9 @@ function App() {
     <div className="main-content">
       <CatalogList catalog={filteredCatalog}/>
       <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
-      <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>Return to Top of Page</a>
+      <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>
+        <LuArrowUpToLine style={iconStyleRTT}/>
+      </a>
     </div>
     </>
   )
