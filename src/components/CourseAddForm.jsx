@@ -51,14 +51,11 @@ function CourseAddForm({ catalog, onAddCourse }) {
             [name]: ''
         }))
     }
-    // Clear success message from previous form submission
-    if (successMessage) {
-        setSuccessMessage('')
-    }
   }
 
   // Change formData object when course type selection is made
   const handleTypeClick = (category) => {
+    // Update the form data
     if (formData.type !== category) {
         setFormData(prev => ({
             ...prev,
@@ -70,10 +67,18 @@ function CourseAddForm({ catalog, onAddCourse }) {
             type: null
         }))
     } 
+    // Clear error for this field if it exists
+    if (errors.type) {
+        setErrors(prev => ({
+            ...prev,
+            type: ''
+        }))
+    }
   }
 
   // Change formData object when degree requirements selection is made
   const handleReqClick = (category) => {
+    // Update the form data
     if (formData.requirements !== category) {
         setFormData(prev => ({
             ...prev,
@@ -115,12 +120,16 @@ function CourseAddForm({ catalog, onAddCourse }) {
         newErrors.id = "ID is required."
     } else if (parseInt(formData.id.split('').map(char => {return /[0-9]/.test(char) ? char : '';}).join('')) < 200) {
         newErrors.id = "ID must be at least 200 for graduate-level courses."
+    } else if (!formData.id.split('').map(char => {return /[0-9]/.test(char)}).includes(true)) {
+        newErrors.id = "ID must be have a numeric component."
     }
     if (!formData.title) {
         newErrors.title = "Title is required."
     }
     if (!formData.units) {
         newErrors.units = "Unit count is required."   
+    } else if (formData.units.length === 1 && isNaN(parseInt(formData.units))) {
+        newErrors.units = "Unit count must be a numeric value."
     } else if (formData.units.length > 1) {
         const unitsAlphCheck = formData.units.split('').map(c => {return /[a-zA-Z]/.test(c)})
         if (unitsAlphCheck.includes(true)) {
@@ -171,7 +180,7 @@ function CourseAddForm({ catalog, onAddCourse }) {
         })
     setTimeout(() => {
         setSuccessMessage('')
-    }, 3000)
+    }, 5000)
   }
 
 
@@ -179,149 +188,157 @@ function CourseAddForm({ catalog, onAddCourse }) {
   return (
     <div id="course-add-section">
         <h2 className="course-add-header">Add a New Course to the Catalog</h2>
+        {successMessage ? <p className="success-message">{successMessage}</p> : 
         <form className="course-add-form" onSubmit={handleSubmit}>
             <div className="form-group">
-                <label className="form-id-label" htmlFor="id">Course ID</label>
+                <label className="form-label" htmlFor="id">Course ID:</label>
                 <input type="text" name="id" value={formData.id} onChange={handleChange}
-                    className={`form-id ${errors.id ? 'error': ''}`}
+                    className={`form-input ${errors.id ? 'error': ''}`}
                     placeholder="Ex: '201' for Info 201"/>      
                 {errors.id && <p className="error-message">{errors.id}</p>}
             </div>
             <div className="form-group">
-                <label className="form-title-label" htmlFor="title">Title</label>
+                <label className="form-label" htmlFor="title">Title:</label>
                 <input type="text" name="title" value={formData.title} onChange={handleChange}
-                    className={`form-title ${errors.title ? 'error': ''}`}
+                    className={`form-input ${errors.title ? 'error': ''}`}
                     placeholder="Ex: 'Information Law and Policy' for Info 205"/>      
                 {errors.title && <p className="error-message">{errors.title}</p>}
             </div>
             <div className="form-group">
-                <label className="form-units-label" htmlFor="units">Unit Count</label>
+                <label className="form-label" htmlFor="units">Unit Count:</label>
                 <input type="text" name="units" value={formData.units} onChange={handleChange}
-                    className={`form-units ${errors.units ? 'error': ''}`}
+                    className={`form-input ${errors.units ? 'error': ''}`}
                     placeholder="Enter a value between 1 and 4"/>      
                 {errors.units && <p className="error-message">{errors.units}</p>}
             </div>
             <div className="form-group">
-                <label className="form-instructor-label" htmlFor="instructor">Instructor Name(s)</label>
+                <label className="form-label" htmlFor="instructor">Instructor Name(s):</label>
                 <input type="text" name="instructor" value={formData.instructor} onChange={handleChange}
-                    className="form-instructor"
+                    className="form-input"
                     placeholder="For multiple instructors, separate the names with a comma"/>
             </div>
             <div className="form-group">
-                <label className="form-description-label" htmlFor="description">Course Description</label>
-                <input type="text" name="description" value={formData.description} onChange={handleChange}
-                    className={`form-description ${errors.description ? 'error': ''}`}
-                    placeholder="Please provide a detailed description of the course"/>      
+                <label className="form-label" htmlFor="description">Course Description:</label>
+                <textarea name="description" value={formData.description} onChange={handleChange} rows="4"
+                    className={`form-input-description ${errors.description ? 'error': ''}`}
+                    placeholder="Please provide a detailed description of the course"
+                ></textarea> 
                 {errors.description && <p className="error-message">{errors.description}</p>}
             </div>
             <div className="form-group">
-                <label className="form-semester-label" htmlFor="semester">Semester Offered</label>
+                <label className="form-label" htmlFor="semester">Semester Offered:</label>
                 <input type="text" name="semester" value={formData.semester} onChange={handleChange}
-                    className={`form-semester ${errors.semester ? 'error': ''}`}
+                    className={`form-input ${errors.semester ? 'error': ''}`}
                     placeholder="Input should follow the format 'Season, Calendar Year'"/>      
                 {errors.semester && <p className="error-message">{errors.semester}</p>}
             </div>
             <div className="form-group">
-                <label className="form-timeslot-label" htmlFor="timeslot">Timeslot Offered</label>
+                <label className="form-label" htmlFor="timeslot">Timeslot Offered:</label>
                 <input type="text" name="timeslot" value={formData.timeslot} onChange={handleChange}
-                    className="form-timeslot"
+                    className="form-input"
                     placeholder="Ex: 'Thursday & Thursday, 11:00am - 12:30pm'"/>
             </div>
             <div className="form-group">
-                <label className="form-location-label" htmlFor="location">Location</label>
+                <label className="form-label" htmlFor="location">Location:</label>
                 <input type="text" name="location" value={formData.location} onChange={handleChange}
-                    className="form-location"
+                    className="form-input"
                     placeholder="Provide the building name followed by the room number"/>
             </div>
             <div className="form-group">
-                <p className="form-type-text">Course Type: </p>
-                <label className="form-type-label">
-                    <input 
-                        type="checkbox"
-                        className={`form-type-btn ${formData.type === "Core" ? 'active' : ''}`}
-                        onChange={() => handleTypeClick("Core")}
-                        checked={formData.type === "Core"}
-                    />
-                    Core
-                </label>    
-                <label className="form-type-label">
-                    <input 
-                        type="checkbox"
-                        className={`form-type-btn ${formData.type === "Non-Core" ? 'active' : ''}`}
-                        onChange={() => handleTypeClick("Non-Core")}
-                        checked={formData.type === "Non-Core"}
-                    />
-                    Non-Core
-                </label>    
+                <p className="form-btn-header">Course Type: </p>
+                <div className="form-group-btn">
+                    <label className="form-btn-label">
+                        <input 
+                            type="checkbox"
+                            className={`form-btn ${formData.type === "Core" ? 'active' : ''}`}
+                            onChange={() => handleTypeClick("Core")}
+                            checked={formData.type === "Core"}
+                        />
+                        Core
+                    </label>    
+                    <label className="form-btn-label">
+                        <input 
+                            type="checkbox"
+                            className={`form-btn ${formData.type === "Non-Core" ? 'active' : ''}`}
+                            onChange={() => handleTypeClick("Non-Core")}
+                            checked={formData.type === "Non-Core"}
+                        />
+                        Non-Core
+                    </label>
+                </div>    
                 {errors.type && <p className="error-message">{errors.type}</p>}
             </div>
             <div className="form-group">
-                <p className="form-requirements-text">Degree requirements fulfilled:</p>
-                <label className="form-requirements-label">
+                <p className="form-btn-header">Degree requirements fulfilled:</p>
+                <div className="form-group-btn">
+                    <label className="form-btn-label">
                     <input 
                         type="checkbox"
-                        className={`form-requirements-btn ${formData.requirements === "Technology" ? 'active' : ''}`}
+                        className={`form-btn ${formData.requirements === "Technology" ? 'active' : ''}`}
                         onChange={() => handleReqClick("Technology")}
                         checked={formData.requirements === "Technology"}
-                    />
-                    Technology
-                </label>    
-                <label className="form-requirements-label">
-                    <input 
-                        type="checkbox"
-                        className={`form-requirements-btn ${formData.requirements === "Social Science and Policy" ? 'active' : ''}`}
-                        onChange={() => handleReqClick("Social Science and Policy")}
-                        checked={formData.requirements === "Social Science and Policy"}
-                    />
-                    Social Science and Policy
-                </label>
+                        />
+                        Technology
+                    </label>    
+                    <label className="form-btn-label">
+                        <input 
+                            type="checkbox"
+                            className={`form-btn ${formData.requirements === "Social Science and Policy" ? 'active' : ''}`}
+                            onChange={() => handleReqClick("Social Science and Policy")}
+                            checked={formData.requirements === "Social Science and Policy"}
+                        />
+                        Social Science and Policy
+                    </label>
+                </div>
             </div>
             <div className="form-group">
-                <p className="form-DScert-text">Applied Data Science Certificate course type:</p>
-                <label className="form-DScert-label">
+                <p className="form-btn-header">Applied Data Science Certificate course type:</p>
+                <div className="form-group-btn">
+                    <label className="form-btn-label">
                     <input 
                         type="checkbox"
-                        className={`form-DScert-btn ${formData.DScertification === "Introductory Data Science Course" ? 'active' : ''}`}
+                        className={`form-btn ${formData.DScertification === "Introductory Data Science Course" ? 'active' : ''}`}
                         onChange={() => handleDSClick("Introductory Data Science Course")}
                         checked={formData.DScertification === "Introductory Data Science Course"}
-                    />
-                    Introductory Data Science
-                </label>    
-                <label className="form-DScert-label">
-                    <input 
-                        type="checkbox"
-                        className={`form-DScert-btn ${formData.DScertification === "Analytical Methods and Techniques of Data Science Course" ? 'active' : ''}`}
-                        onChange={() => handleDSClick("Analytical Methods and Techniques of Data Science Course")}
-                        checked={formData.DScertification === "Analytical Methods and Techniques of Data Science Course"}
-                    />
-                    Analytical Methods and Techniques of Data Science
-                </label>
-                <label className="form-DScert-label">
-                    <input 
-                        type="checkbox"
-                        className={`form-DScert-btn ${formData.DScertification === "Elective" ? 'active' : ''}`}
-                        onChange={() => handleDSClick("Elective")}
-                        checked={formData.DScertification === "Elective"}
-                    />
-                    Elective
-                </label> 
+                        />
+                        Introductory Data Science
+                    </label>    
+                    <label className="form-btn-label">
+                        <input 
+                            type="checkbox"
+                            className={`form-btn ${formData.DScertification === "Analytical Methods and Techniques of Data Science Course" ? 'active' : ''}`}
+                            onChange={() => handleDSClick("Analytical Methods and Techniques of Data Science Course")}
+                            checked={formData.DScertification === "Analytical Methods and Techniques of Data Science Course"}
+                        />
+                        Analytical Methods and Techniques of Data Science
+                    </label>
+                    <label className="form-btn-label">
+                        <input 
+                            type="checkbox"
+                            className={`form-btn ${formData.DScertification === "Elective" ? 'active' : ''}`}
+                            onChange={() => handleDSClick("Elective")}
+                            checked={formData.DScertification === "Elective"}
+                        />
+                        Elective
+                    </label>
+                </div>
             </div>
             <div className="form-group">
-                <label className="form-topics-label" htmlFor="topics">Topics</label>
+                <label className="form-label" htmlFor="topics">Topics:</label>
                 <input type="text" name="topics" value={formData.topics} onChange={handleChange}
-                    className={`form-topics ${errors ? 'error': ''}`}
+                    className={`form-input ${errors.topics ? 'error': ''}`}
                     placeholder="Enter capitalized topics separated by commas. Refer to topics list in sidebar for existing topics, or add a new one"/>      
                 {errors.topics && <p className="error-message">{errors.topics}</p>}
             </div>
             <div className="form-group">
-                <label className="form-other-label" htmlFor="other">Other Details</label>
+                <label className="form-label" htmlFor="other">Other Details:</label>
                 <input type="text" name="other" value={formData.other} onChange={handleChange}
-                    className="form-other"
+                    className="form-input"
                     placeholder="Note any other relevant details here"/>
             </div>
             <button type="submit" className="course-add-submit">Submit Course</button>
-            {successMessage && <p className="success-message">{successMessage}</p>}
-        </form> 
+        </form>
+        }
     </div>
   )
 }

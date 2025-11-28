@@ -36,3 +36,8 @@ TO-DO:
 [ ] host live demo on Netlify or something similar  
 [x] start Github repo  
 [ ] push all code to Github repo  
+
+
+
+MINOR FIXES:
+[ ] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary...

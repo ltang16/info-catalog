@@ -25,13 +25,13 @@ function CatalogCourse({ course }) {
             <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id}: {course.title}</p>
             <p className="course-units">{course.units} Units</p>
             <p className="course-instructor">Instructor(s): {instructors}</p>
-            <div className="course-timeslot">
+            <ul className="course-timeslot">
                 <p className="course-timeslot-text">Timeslot(s):</p>
                 {Array.isArray(timeslots) ? timeslots.map((ts, index) => (
                     <li className="course-timeslot-details">{ts}</li>
                 )) : 
                     <p className="course-timeslot-details-single">{timeslots}</p>}
-            </div>
+            </ul>
             <div className="course-description-container">
                 {descriptionArray.map((desc) => (
                     <p className="course-description">{desc}</p>
@@ -42,17 +42,17 @@ function CatalogCourse({ course }) {
             {!course.other ? "" : <p className="course-other">{course.other}</p>}
 
             {/* If this course satisfies one of the MIMS degree requirements, add this section */}
-            {!course.requirements ? "" : <div className="course-requirements">
-                <p className="course-requirements-text">Meets the MIMS </p>
-                <p className="course-requirements-req">{course.requirements}</p>
-                <p className="course-requirements-text">degree requirement</p>
-            </div>}
+            {!course.requirements ? "" : <p className="course-requirements">
+                Meets the MIMS
+                <span className="course-requirements-req">{course.requirements}</span>
+                degree requirement
+            </p>}
 
             {/* If this course can be counted towards the Applied DS certificate, add this section */}
-            {!course.DScertification ? "" : <div className="course-DScert">
-                <p className="course-DScert-text">Counts towards the Graduate Certificate in Applied Data Science as an </p>
-                <p className="course-DScert-type">{course.DScertification}</p>
-            </div>}
+            {!course.DScertification ? "" : <p className="course-DScert">
+                Counts towards the Graduate Certificate in Applied Data Science as an
+                <span className="course-DScert-type">{course.DScertification}</span>
+            </p>}
 
             <div className="course-topics">
                 <p className="course-topics-text">Topics: </p>
