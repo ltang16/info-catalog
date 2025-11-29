@@ -229,7 +229,7 @@ function CourseAddForm({ catalog, onAddCourse }) {
                 <label className="form-label" htmlFor="semester">Semester Offered:</label>
                 <input type="text" name="semester" value={formData.semester} onChange={handleChange}
                     className={`form-input ${errors.semester ? 'error': ''}`}
-                    placeholder="Input should follow the format 'Season, Calendar Year'"/>      
+                    placeholder="Ex: 'Fall 2025' or 'Spring 2026'"/>      
                 {errors.semester && <p className="error-message">{errors.semester}</p>}
             </div>
             <div className="form-group">

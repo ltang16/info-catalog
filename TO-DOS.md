@@ -37,9 +37,9 @@ TO-DO:
 [ ] 800+ word writeup :)  
 [ ] host live demo on Netlify or something similar  
 [x] start Github repo  
-[ ] push all code to Github repo  
+[ ] push all code to Github repo
 
 
 
 MINOR FIXES:
-[ ] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary...
+[x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)

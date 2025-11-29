@@ -164,6 +164,7 @@ function App() {
       <CatalogList catalog={filteredCatalog}/>
       <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
       <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>
+        {/* Using a React icon for this page hyperlink :) */}
         <LuArrowUpToLine style={iconStyleRTT}/>
       </a>
     </div>

@@ -676,7 +676,7 @@
     {
         "index": 43,
         "id": 290,
-        "title": "Applied Generative AI ad Large Language Models",
+        "title": "Applied Generative AI and Large Language Models",
         "units": 3,
         "instructor": "Frank Coyle",
         "description": "This course on generative AI blends the theoretical foundations of LLMs with hands-on applications. Topics include transformer architectures, prompt engineering, API integration, and retrieval augmented generation (RAG). The course emphasizes practical skills, including working with open-source models, fine-tuning LLMs, implementing graph-based enhancements and using Agentic technologies to build applications. Ethical considerations are integrated throughout, with a focused module on bias assessment and mitigation strategies. By the course’s end, participants will possess a robust toolkit for leveraging LLMs for application development.",
