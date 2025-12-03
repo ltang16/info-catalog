@@ -23,17 +23,17 @@ TO-DO:
 >>> [x] change "return to top" button to be sticky (bottom right) and up arrow symbol?
 
 > [x] sort filtered catalog in alphabetical order based on course ID, then course title 
-> [ ] add new component for breadcrumbs
+> [x] add new component for breadcrumbs
 
 [x] build full catalog page CSS -- individual course item component, filter sidebar, header, course addition form
-> [ ] add responsive styling for smaller screens???
+> [x] add responsive styling for smaller screens -- make navbar and hamburger menu components :)
 
 [x] add form for course addition to catalog -- store updated catalog in localStorage
 [ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
-[ ] add breadcrumbs component and functions
+[x] add breadcrumbs component and full CSS
 [ ] 800+ word writeup :)  
 [ ] host live demo on Netlify or something similar  
 [x] start Github repo  

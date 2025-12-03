@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import jsonData from './data/infocatalog.json'
+import Navbar from './components/Navbar'
 import FilterSidebar from './components/FilterSidebar'
 import Breadcrumbs from './components/Breadcrumbs'
 import CatalogList from './components/CatalogList'
 import CourseAddForm from './components/CourseAddForm'
 import { LuArrowUpToLine } from "react-icons/lu"
-
 
 
 
@@ -155,6 +155,8 @@ function App() {
 
   return (
     <>
+    <Navbar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
+      catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <div className="header-section">
       <h1 className="catalog-title">UC Berkeley Information Course Catalog</h1>
       <p className="catalog-details">Welcome to the School of Information course catalog! This is a repository of all 
