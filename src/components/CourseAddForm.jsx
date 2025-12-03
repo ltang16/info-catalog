@@ -269,7 +269,7 @@ function CourseAddForm({ catalog, onAddCourse }) {
                 {errors.type && <p className="error-message">{errors.type}</p>}
             </div>
             <div className="form-group">
-                <p className="form-btn-header">Degree requirements fulfilled:</p>
+                <p className="form-btn-header">MIMS degree requirements fulfilled:</p>
                 <div className="form-group-btn">
                     <label className="form-btn-label">
                     <input 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import jsonData from './data/infocatalog.json'
 import FilterSidebar from './components/FilterSidebar'
+import Breadcrumbs from './components/Breadcrumbs'
 import CatalogList from './components/CatalogList'
 import CourseAddForm from './components/CourseAddForm'
 import { LuArrowUpToLine } from "react-icons/lu"
@@ -16,6 +17,8 @@ function App() {
     JSON.parse(localStorage.getItem("info-catalog")) ||
     jsonData.catalog
   )
+
+
 
   // State data for MIMS degree requirement filter -- 'all Info courses' by default
   const [degReq, setDegReq] = useState('all')
@@ -82,6 +85,9 @@ function App() {
     // Finally, sort the filtered catalog array in ascending order by course ID and then course title :)
     String(a.id).localeCompare(String(b.id)) || String(a.title).localeCompare(String(b.title))
   )
+
+  // Create variable to determine if breadcrumb component should exist (only if at least one filter has been applied)
+  const noBreadcrumbs = (degReq === 'all' && DScert === 'all' && topics.length === 0)
 
 
 
@@ -161,6 +167,10 @@ function App() {
     <FilterSidebar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
       catalog={catalog} topics={topics} toggleTopic={toggleTopic} clearAllFilters={clearAllFilters}/>
     <div className="main-content">
+      {!noBreadcrumbs && 
+      <Breadcrumbs degReq={degReq} removeReq={handleReqFilter} DScert={DScert} removeDSCert={handleDSCertFilter} 
+        topics={topics} removeTopic={toggleTopic}/>
+      }
       <CatalogList catalog={filteredCatalog}/>
       <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
       <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>
