@@ -1,6 +1,12 @@
 import CatalogCourse from './CatalogCourse'
 
+
+
+// This component houses the list of all courses in the filtered catalog. It also displays the count of courses in the
+// filtered catalog. 
+
 function CatalogList({ catalog }) {
+  
   return (
     <ul className="catalog-list">
         {catalog.length === 0 ? 

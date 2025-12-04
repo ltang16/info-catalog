@@ -60,6 +60,11 @@ function App() {
     setTopics([])
   }
 
+  // Create variable to determine if breadcrumb component should exist (only if at least one filter has been applied)
+  const noBreadcrumbs = (degReq === 'all' && DScert === 'all' && topics.length === 0)
+
+
+
   // Derived state for filtered and sorted catalog, based on degree requirement, DS certificate, and topics filters
   // Filtering order doesn't matter since the resulting set of courses will be the same :) 
   const filteredCatalog = catalog.filter((course) => {
@@ -85,9 +90,6 @@ function App() {
     // Finally, sort the filtered catalog array in ascending order by course ID and then course title :)
     String(a.id).localeCompare(String(b.id)) || String(a.title).localeCompare(String(b.title))
   )
-
-  // Create variable to determine if breadcrumb component should exist (only if at least one filter has been applied)
-  const noBreadcrumbs = (degReq === 'all' && DScert === 'all' && topics.length === 0)
 
 
 
@@ -135,7 +137,7 @@ function App() {
     const topicsList = formData.topics.split(', ')
     formData.topics = topicsList
     // Update the catalog with the new course! :) new additions will always be at the end of the JSON file
-    // But the catalog will be sorted!
+    // But the catalog will be sorted by course ID and title!
     setCatalog([...catalog, formData])
   }
 

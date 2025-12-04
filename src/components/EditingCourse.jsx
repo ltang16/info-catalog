@@ -1,44 +1,39 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 
-// This (very long) component produces the form at the bottom of the webpage that allows the user to add a course to the 
-// catalog. It notifies the user if there are missing required inputs, and then appends the provided course data to the 
-// end of the catalog data, with all changes stored in localStorage! 
+// This component produces the "form state" of the current course's data, to be edited as the user desires. The user's 
+// changes to the catalog are then stored in localStorage as well. Much of this has been repurposed from the 
+// CourseAddForm component.
 
-function CourseAddForm({ catalog, onAddCourse }) {
-    
-  // State for form data, with default values for instructor, timeslot, location, requirements, DS certification, and other
+function EditingCourse({ course, toggleEdit }) {
+
+  // Creating variables to handle course data if they're arrays...
+  const instructorData = Array.isArray(course.instructor) ? course.instructor.join(', ') : course.instructor
+  const semesterData = Array.isArray(course.semester) ? course.semester.join('. ') : course.semester
+  const timeslotData = Array.isArray(course.timeslot) ? course.timeslot.join('. ') : course.timeslot
+  const locationData = Array.isArray(course.location) ? course.location.join('. ') : course.location
+  const topicsData = Array.isArray(course.topics) ? course.topics.join(', ') : course.topics
+
+  // State data to handle the course's current details
   const [formData, setFormData] = useState({
-    index: catalog.length + 1,
-    id: '',
-    title: '',
-    units: '',
-    instructor: '',
-    description: '',
-    semester: '',
-    timeslot: '',
-    location: '',
-    type: '',
-    requirements: '',
-    DScertification: '',
-    topics: '',
-    other: ''
+    id: course.id.toString(),
+    title: course.title,
+    units: course.units.toString(),
+    instructor: instructorData,
+    description: course.description,
+    semester: semesterData,
+    timeslot: timeslotData,
+    location: locationData,
+    type: course.type,
+    requirements: course.requirements,
+    DScertification: course.DScertification,
+    topics: topicsData,
+    other: course.other
   })
-
-  // Effect to correctly update the future course's index when the catalog updates after being pulled from JSON file
-  useEffect(() => {
-    setFormData(prev => ({
-        ...prev,
-        index: catalog.length + 1
-    }))
-  }, [catalog])
 
   // Error state data for error handling -- object with attributes for each formData field
   const [errors, setErrors] = useState({})
-
-  // State data for success message
-  const [successMessage, setSuccessMessage] = useState('')
 
 
 
@@ -115,9 +110,11 @@ function CourseAddForm({ catalog, onAddCourse }) {
 
 
 
-  // Handle form submission -- error validation, submission, adding to catalog :)
+  // Handle form submission -- error validation, submission, updating catalog!
+  // TO-DO: ACTUALLY NEED TO CREATE ANOTHER FUNCTION -- FORM SUBMISSION NEEDS TO HANDLE BOTH 
+                                    // SAVING COURSE DATA AND RETURNING TO COURSE DETAIL STATE
   const handleSubmit = (e) => {
-    // Prevent page from reloading on submission
+    // Prevent page from reloading on form submission
     e.preventDefault()
 
     // Validate all form fields
@@ -165,37 +162,23 @@ function CourseAddForm({ catalog, onAddCourse }) {
         return
     }
 
-    // Otherwise, the form is valid and we can submit it :) show a success message, then clear the form after a few seconds
-    setSuccessMessage('The course has been added to the catalog. Thank you for your submission!')
-    onAddCourse(formData)
-    setFormData({
-        index: catalog.length + 1,
-        id: '',
-        title: '',
-        units: '',
-        instructor: '',
-        description: '',
-        semester: '',
-        timeslot: '',
-        location: '',
-        type: '',
-        requirements: '',
-        DScertification: '',
-        topics: '',
-        other: ''
-    })
-    setTimeout(() => {
-        setSuccessMessage('')
-    }, 5000)
+    // Otherwise, the form is valid! Update the course data, then revert to displaying standard course data component
+    toggleEdit()
+    // TO-DO: SCROLL BACK TO COURSE THAT WAS EDITED :)
   }
 
 
-  
+
   return (
-    <div id="course-add-section">
-        <h2 className="course-add-header">Add a New Course to the Catalog</h2>
-        {successMessage ? <p className="success-message">{successMessage}</p> : 
-        <form className="course-add-form" onSubmit={handleSubmit}>
+    <div className="course-editing">
+      <p className="course-editing-header">Edit Course — {course.id} {course.title}</p>
+      <p className="course-editing-note">Note that semester, timeslot, and location data for multiple semesters is 
+        separated with a period and space; if there is a lab section that same semester, it's semicolon-delimited from the 
+        lecture session. Please ensure that the number of period-separated items is the same across the course semester, 
+        timeslot, and location information, and that you've ordered them properly so that the data for a single semester 
+        is displayed correctly.
+      </p>
+      <form className="course-add-form" onSubmit={handleSubmit}>
             <div className="form-group">
                 <label className="form-label" htmlFor="id">Course ID:</label>
                 <input type="text" name="id" value={formData.id} onChange={handleChange}
@@ -343,11 +326,10 @@ function CourseAddForm({ catalog, onAddCourse }) {
                     placeholder="Note any other relevant details here"
                 ></textarea>
             </div>
-            <button type="submit" className="course-add-submit">Submit Course</button>
+            <button type="submit" className="course-save-btn">Save Changes</button>
         </form>
-        }
     </div>
   )
 }
 
-export default CourseAddForm
+export default EditingCourse

@@ -1,9 +1,16 @@
-function TopicFilters({ catalog, topics, onClick }) {
+// This component provides the filter buttons for course topics, which the user can click on to filter the catalog as 
+// desired. These buttons are housed in the page's filter sidebar.
 
+function TopicFilters({ catalog, topics, onClick }) {
+    
   // Create an alphabetically-sorted array of all topics found in the course catalog
   // If a new topic is added later on, a new button should be added for it dynamically! This way, I don't have to 
   // add it manually myself :)
-  const allTopics = [...new Set(catalog.map((course) => course.topics).flat())].sort()
+  const allTopics = [...new Set(catalog.map((course) => course.topics).flat())].sort(
+    (a, b) => a.toLowerCase().localeCompare(b.toLowerCase())
+  )
+  
+  
 
   return (
     <div className="topic-filters">

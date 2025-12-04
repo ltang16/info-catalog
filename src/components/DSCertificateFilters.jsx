@@ -1,4 +1,8 @@
+// This component provides the filter buttons for course applicability towards the Applied Data Science certificate, which 
+// the user can click on to filter the catalog as desired. These buttons are housed in the page's filter sidebar.
+
 function DSCertificateFilters({ DScert, onClick }) {
+  
   return (
     <div className="certificate-filters">
         <p className="certificate-filters-text">Applied Data Science Certificate course type:</p>

@@ -253,11 +253,31 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   border-top: solid 1px black;
 }
 
+.course-header {
+  margin: 0px 0px -8px 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .course-id-title {
   font-size: 14pt;
   font-weight: bold;
   margin: 10px 0px;
   color: #060081;
+}
+
+.course-edit-btn {
+  padding: 0px;
+  margin: 0px 0px 10px 15px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+}
+
+.course-edit-btn:hover {
+  border-color: white;
 }
 
 .course-units, .course-instructor, .course-timeslot {
@@ -326,6 +346,30 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   font-size: 11pt;
 }
 
+/* <============= Course editing form styling ============> */
+
+.course-editing {
+  width: 90%;
+  padding: 10px;
+  border-top: solid 1px black;
+  margin-bottom: 10px;
+}
+
+.course-editing-header {
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 10px 0px;
+  color: #060081;
+}
+
+.course-editing-note {
+  font-size: 11pt;
+}
+
+.course-save-btn {
+  background-color: #060081; 
+}
+
 /* <============= Course addition form styling ============> */
 
 #course-add-section {
@@ -360,9 +404,10 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   font-family: "Figtree", sans-serif;
 }
 
-.form-input-description {
+.form-input-description, .form-input-other {
   background-color: white;
   border: solid 2px black;
+  margin-bottom: 2px;
   border-radius: 5px;
   padding-left: 10px;
   color: black;

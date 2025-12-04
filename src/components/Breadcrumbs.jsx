@@ -1,4 +1,9 @@
+// This component produces the breadcrumbs feature, a list of the currently-active filters applied by the user. While it 
+// gives the user another way to remove active filters, it also helps visually indicate the "path" that they took to reach 
+// the resulting set of courses.
+
 function Breadcrumbs({ degReq, removeReq, DScert, removeDSCert, topics, removeTopic }) {
+    
     // Need to get the full name for the MIMS degree requirement, since degReq is an abbreviated version
     let degReqText
     if (degReq !== 'all') {

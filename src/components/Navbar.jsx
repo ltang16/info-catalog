@@ -1,6 +1,13 @@
 import FilterSidebar from "./FilterSidebar"
 
+
+
+// This component creates the navigation bar at the top of the page, to be displayed when the screen size is sufficiently
+// narrow. The filter sidebar is "removed" and displays below the navbar when the hamburger menu is toggled, so the user 
+// is still able to use the course filters, but the visual appearance is refined. 
+
 function Navbar({ degReq, handleReqFilter, DScert, handleDSCertFilter, catalog, topics, toggleTopic, clearAllFilters }) {
+
   return (
     <div className="navbar">
         <input type="checkbox" name="navbar-btn" id="navbar-btn"/>

@@ -1,4 +1,8 @@
+// This component provides the filter buttons for the MIMS degree requirements, which the user can click on to filter
+// the catalog as desired. These buttons are housed in the page's filter sidebar.
+
 function DegreeFilters({ degReq, onClick }) {
+  
   return (
     <div className="requirement-filters">
         <p className="requirement-filters-text">MIMS degree requirement type:</p>

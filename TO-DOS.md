@@ -23,13 +23,18 @@ TO-DO:
 >>> [x] change "return to top" button to be sticky (bottom right) and up arrow symbol?
 
 > [x] sort filtered catalog in alphabetical order based on course ID, then course title 
+> [x] sort topics list in sidebar by alphabetical order, even if lowercase! 
 > [x] add new component for breadcrumbs
 
 [x] build full catalog page CSS -- individual course item component, filter sidebar, header, course addition form
-> [x] add responsive styling for smaller screens -- make navbar and hamburger menu components :)
+> [x] add responsive styling for smaller screens -- make navbar and hamburger menu components :) (this was such a painful process and I don't even really like the solution I had to devise)
 
 [x] add form for course addition to catalog -- store updated catalog in localStorage
 [ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
+> [x] create course editing status state data
+> [ ] build new function for course editing and updating catalog state data
+> [ ] build new component for editing course interface -- use form fields and populate with existing course data! "save" button should call the new catalog update function, then set the edit status to false and display new catalog
+
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
@@ -43,3 +48,5 @@ TO-DO:
 
 MINOR FIXES:
 [x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)
+[ ] add in QoL feature for scrolling to edited course after edit is complete... useRef??????
+[ ] update course addition form value handling for multiple semester data... 

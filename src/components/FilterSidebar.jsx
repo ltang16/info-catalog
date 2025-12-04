@@ -2,6 +2,10 @@ import DegreeFilters from './DegreeFilters'
 import DSCertificateFilters from './DSCertificateFilters'
 import TopicFilters from './TopicFilters'
 
+
+
+// This component creates the webpage's sidebar to house all filter buttons at the right side of the page. 
+
 function FilterSidebar({ degReq, handleReqFilter, DScert, handleDSCertFilter, catalog, topics, toggleTopic, 
     clearAllFilters }) {
 
