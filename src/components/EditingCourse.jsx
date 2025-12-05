@@ -6,17 +6,18 @@ import { useState } from 'react'
 // changes to the catalog are then stored in localStorage as well. Much of this has been repurposed from the 
 // CourseAddForm component.
 
-function EditingCourse({ course, toggleEdit }) {
+function EditingCourse({ course, toggleEdit, onEditCourse }) {
 
   // Creating variables to handle course data if they're arrays...
-  const instructorData = Array.isArray(course.instructor) ? course.instructor.join(', ') : course.instructor
-  const semesterData = Array.isArray(course.semester) ? course.semester.join('. ') : course.semester
-  const timeslotData = Array.isArray(course.timeslot) ? course.timeslot.join('. ') : course.timeslot
-  const locationData = Array.isArray(course.location) ? course.location.join('. ') : course.location
+  const instructorData = Array.isArray(course.instructor) ? course.instructor.join('~ ') : course.instructor
+  const semesterData = Array.isArray(course.semester) ? course.semester.join('~ ') : course.semester
+  const timeslotData = Array.isArray(course.timeslot) ? course.timeslot.join('~ ') : course.timeslot
+  const locationData = Array.isArray(course.location) ? course.location.join('~ ') : course.location
   const topicsData = Array.isArray(course.topics) ? course.topics.join(', ') : course.topics
 
   // State data to handle the course's current details
   const [formData, setFormData] = useState({
+    index: course.index,
     id: course.id.toString(),
     title: course.title,
     units: course.units.toString(),
@@ -111,8 +112,6 @@ function EditingCourse({ course, toggleEdit }) {
 
 
   // Handle form submission -- error validation, submission, updating catalog!
-  // TO-DO: ACTUALLY NEED TO CREATE ANOTHER FUNCTION -- FORM SUBMISSION NEEDS TO HANDLE BOTH 
-                                    // SAVING COURSE DATA AND RETURNING TO COURSE DETAIL STATE
   const handleSubmit = (e) => {
     // Prevent page from reloading on form submission
     e.preventDefault()
@@ -163,8 +162,9 @@ function EditingCourse({ course, toggleEdit }) {
     }
 
     // Otherwise, the form is valid! Update the course data, then revert to displaying standard course data component
+    onEditCourse(formData)
     toggleEdit()
-    // TO-DO: SCROLL BACK TO COURSE THAT WAS EDITED :)
+    // TO-DO: SCROLL BACK TO TOP OF COURSE THAT WAS EDITED :)
   }
 
 
@@ -172,11 +172,12 @@ function EditingCourse({ course, toggleEdit }) {
   return (
     <div className="course-editing">
       <p className="course-editing-header">Edit Course — {course.id} {course.title}</p>
-      <p className="course-editing-note">Note that semester, timeslot, and location data for multiple semesters is 
-        separated with a period and space; if there is a lab section that same semester, it's semicolon-delimited from the 
-        lecture session. Please ensure that the number of period-separated items is the same across the course semester, 
-        timeslot, and location information, and that you've ordered them properly so that the data for a single semester 
-        is displayed correctly.
+      <p className="course-editing-note">Note that semester, timeslot, location, and instructor data are separated with a 
+        ~ and space if there are multiple semesters; if there is a lab section in addition to the lecture session for 
+        a semester, it's semicolon-delimited from the lecture session. Please ensure that the number of tilde-separated 
+        items is the same across the course semester, timeslot, and location information, and that you've ordered them 
+        properly so that the data for a single semester is displayed correctly. The list of topics should be separated 
+        with a comma and a space.
       </p>
       <form className="course-add-form" onSubmit={handleSubmit}>
             <div className="form-group">

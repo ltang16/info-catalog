@@ -108,7 +108,7 @@ function App() {
 
   
 
-  // Function to add course data from form component to catalog! 
+  // Function to add course data from course addition form component to catalog! 
   const addCourse = (formData) => {
     // Handle 0 or multiple instructors
     if (!formData.instructor) {
@@ -139,6 +139,63 @@ function App() {
     // Update the catalog with the new course! :) new additions will always be at the end of the JSON file
     // But the catalog will be sorted by course ID and title!
     setCatalog([...catalog, formData])
+  }
+
+  // Function to update course in catalog with new data from editable course component!
+  const editCourse = (formData) => {
+    // Handle 0 or multiple instructors
+    if (!formData.instructor) {
+      formData.instructor = "Staff"
+    } else if (formData.instructor.includes('~')) {
+      const instructorList = formData.instructor.split('~ ')
+      formData.instructor = instructorList
+    }
+    // Handle empty or list values for various course attributes
+    if (formData.semester.includes('~')) {
+      const semesterList = formData.semester.split('~ ')
+      formData.semester = semesterList
+    }
+    if (!formData.timeslot) {
+      formData.timeslot = null
+    } else if (formData.timeslot.includes('~')) {
+      const timeslotList = formData.timeslot.split('~ ')
+      formData.timeslot = timeslotList
+    }
+    if (!formData.location) {
+      formData.location = null
+    } else if (formData.location.includes('~')) {
+      const locationList = formData.location.split('~ ')
+      formData.location = locationList
+    }
+    if (!formData.requirements) {
+      formData.requirements = null
+    }
+    if (!formData.DScertification) {
+      formData.DScertification = null
+    }
+    // Parse topics list
+    console.log(formData.topics)
+    const topicsList = formData.topics.split(', ')
+    formData.topics = topicsList
+    // Finally, update the catalog with the new course information -- first a direct state mutation, then updating
+    // catalog state data to trigger the localStorage update effect :)))
+    catalog.forEach(course => {
+      if (course.index === formData.index) {
+        course.id = formData.id;
+        course.title = formData.title;
+        course.units = formData.units;
+        course.instructor = formData.instructor;
+        course.description = formData.description;
+        course.semester = formData.semester;
+        course.timeslot = formData.timeslot;
+        course.location = formData.location;
+        course.type = formData.type;
+        course.requirements = formData.requirements;
+        course.DScertification = formData.DScertification;
+        course.topics = formData.topics;
+        course.other = formData.other;
+    }})
+    setCatalog([...catalog])
   }
 
   // Since I don't have a database to store the JSON file in, I'll use localStorage to keep track of the user's added 
@@ -175,7 +232,7 @@ function App() {
       <Breadcrumbs degReq={degReq} removeReq={handleReqFilter} DScert={DScert} removeDSCert={handleDSCertFilter} 
         topics={topics} removeTopic={toggleTopic}/>
       }
-      <CatalogList catalog={filteredCatalog}/>
+      <CatalogList catalog={filteredCatalog} onEditCourse={editCourse}/>
       <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
       <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>
         {/* Using a React icon for this page hyperlink :) */}

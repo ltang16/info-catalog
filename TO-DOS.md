@@ -30,10 +30,10 @@ TO-DO:
 > [x] add responsive styling for smaller screens -- make navbar and hamburger menu components :) (this was such a painful process and I don't even really like the solution I had to devise)
 
 [x] add form for course addition to catalog -- store updated catalog in localStorage
-[ ] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
+[x] enable course item editing (ideally in place rather than sending to form at bottom...) -- also store in localStorage
 > [x] create course editing status state data
-> [ ] build new function for course editing and updating catalog state data
-> [ ] build new component for editing course interface -- use form fields and populate with existing course data! "save" button should call the new catalog update function, then set the edit status to false and display new catalog
+> [x] build new function for course editing and updating catalog state data (wow what a trial and error process this was)
+> [x] build new component for editing course interface -- use form fields and populate with existing course data! "save" button should call the new catalog update function, then set the edit status to false and display new catalog
 
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons

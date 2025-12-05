@@ -8,7 +8,7 @@ import EditingCourse from './EditingCourse'
 // file. The user can also edit each course by clicking the edit button, which will bring up a different form-based 
 // component to store the user's changes to the course details.
 
-function CatalogCourse({ course }) {
+function CatalogCourse({ course, onEditCourse }) {
 
     // Create a new string for instructor names, since some courses have multiple head instructors
     const instructors = Array.isArray(course.instructor) ? course.instructor.join(", ") : course.instructor
@@ -48,7 +48,7 @@ function CatalogCourse({ course }) {
     return (
         <>
             {isEditing ? 
-            <EditingCourse course={course} toggleEdit={toggleEdit}/> :
+            <EditingCourse course={course} toggleEdit={toggleEdit} onEditCourse={onEditCourse}/> :
             <li className="course-item" id={`i${course.index}`}>
                 <div className="course-header">
                     <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id}: {course.title}</p>
