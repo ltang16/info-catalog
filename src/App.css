@@ -197,6 +197,9 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   right: 15px;
   height: 30px;
   width: 30px;
+}
+
+.page-top-shortcut:hover {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 3px 0px black;

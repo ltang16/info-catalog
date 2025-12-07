@@ -6,7 +6,7 @@ import { useState } from 'react'
 // changes to the catalog are then stored in localStorage as well. Much of this has been repurposed from the 
 // CourseAddForm component.
 
-function EditingCourse({ course, toggleEdit, onEditCourse }) {
+function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
 
   // Creating variables to handle course data if they're arrays...
   const instructorData = Array.isArray(course.instructor) ? course.instructor.join('~ ') : course.instructor
@@ -161,10 +161,11 @@ function EditingCourse({ course, toggleEdit, onEditCourse }) {
         return
     }
 
-    // Otherwise, the form is valid! Update the course data, then revert to displaying standard course data component
+    // Otherwise, the form is valid! Update the course data, revert to displaying standard course data component, and 
+    // finally activate the scroll back to the course data component :D
     onEditCourse(formData)
     toggleEdit()
-    // TO-DO: SCROLL BACK TO TOP OF COURSE THAT WAS EDITED :)
+    setNeedScroll(`i${formData.index}`)
   }
 
 
@@ -317,7 +318,7 @@ function EditingCourse({ course, toggleEdit, onEditCourse }) {
                 <label className="form-label" htmlFor="topics">Topics:</label>
                 <input type="text" name="topics" value={formData.topics} onChange={handleChange}
                     className={`form-input ${errors.topics ? 'error': ''}`}
-                    placeholder="Enter capitalized topics separated by commas. Refer to topics list in sidebar for existing topics, or add a new one"/>      
+                    placeholder="Enter capitalized topics separated by commas and spaces, e.g. 'Data Science, Programming'. Refer to topics list in sidebar for existing topics, or add a new one"/>      
                 {errors.topics && <p className="error-message">{errors.topics}</p>}
             </div>
             <div className="form-group">

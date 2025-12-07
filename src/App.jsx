@@ -174,7 +174,6 @@ function App() {
       formData.DScertification = null
     }
     // Parse topics list
-    console.log(formData.topics)
     const topicsList = formData.topics.split(', ')
     formData.topics = topicsList
     // Finally, update the catalog with the new course information -- first a direct state mutation, then updating
@@ -212,6 +211,23 @@ function App() {
 
 
 
+  // State data to determine if a scrolling action is needed due to a course edit or addition and to which section ID
+  // (empty by default)
+  let [needScroll, setNeedScroll] = useState('')
+  // Effect to scroll to the target section if necessary! Also resets editScroll 
+  useEffect(() => {
+    if (needScroll) {
+      const targetSection = document.getElementById(needScroll)
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    setNeedScroll('')
+  }, [needScroll])
+
+
+
   return (
     <>
     <Navbar degReq={degReq} handleReqFilter={handleReqFilter} DScert={DScert} handleDSCertFilter={handleDSCertFilter}
@@ -232,8 +248,8 @@ function App() {
       <Breadcrumbs degReq={degReq} removeReq={handleReqFilter} DScert={DScert} removeDSCert={handleDSCertFilter} 
         topics={topics} removeTopic={toggleTopic}/>
       }
-      <CatalogList catalog={filteredCatalog} onEditCourse={editCourse}/>
-      <CourseAddForm catalog={catalog} onAddCourse={addCourse}/>
+      <CatalogList catalog={filteredCatalog} onEditCourse={editCourse} setNeedScroll={setNeedScroll}/>
+      <CourseAddForm catalog={catalog} onAddCourse={addCourse} setNeedScroll={setNeedScroll}/>
       <a className="page-top-shortcut" href="#root" onClick={handleLinkClick}>
         {/* Using a React icon for this page hyperlink :) */}
         <LuArrowUpToLine style={iconStyleRTT}/>

@@ -48,5 +48,7 @@ TO-DO:
 
 MINOR FIXES:
 [x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)
-[ ] add in QoL feature for scrolling to edited course after edit is complete... useRef??????
+[x] add in QoL feature for scrolling to edited course after edit is complete... useCallback???
+> [x] add in QoL scroll to course added from "course add" form :)
+
 [ ] update course addition form value handling for multiple semester data... 

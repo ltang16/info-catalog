@@ -5,7 +5,7 @@ import CatalogCourse from './CatalogCourse'
 // This component houses the list of all courses in the filtered catalog. It also displays the count of courses in the
 // filtered catalog. 
 
-function CatalogList({ catalog, onEditCourse }) {
+function CatalogList({ catalog, onEditCourse, setNeedScroll }) {
   
   return (
     <ul className="catalog-list">
@@ -13,7 +13,7 @@ function CatalogList({ catalog, onEditCourse }) {
         <p className="catalog-description">No courses available for current filter selections.</p> :
         <p className="catalog-description">{catalog.length} course{catalog.length > 1 ? "s" : ""} available.</p>}
         {catalog.length !== 0 && catalog.map((course) => (
-            <CatalogCourse course={course} onEditCourse={onEditCourse}/>
+            <CatalogCourse course={course} onEditCourse={onEditCourse} setNeedScroll={setNeedScroll}/>
         ))}
     </ul>
   )

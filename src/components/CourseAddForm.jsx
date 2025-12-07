@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 // catalog. It notifies the user if there are missing required inputs, and then appends the provided course data to the 
 // end of the catalog data, with all changes stored in localStorage! 
 
-function CourseAddForm({ catalog, onAddCourse }) {
+function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
     
   // State for form data, with default values for instructor, timeslot, location, requirements, DS certification, and other
   const [formData, setFormData] = useState({
@@ -166,6 +166,8 @@ function CourseAddForm({ catalog, onAddCourse }) {
     }
 
     // Otherwise, the form is valid and we can submit it :) show a success message, then clear the form after a few seconds
+    // Also jump to where the new course has been added to the catalog after the wait time
+    const courseIndex = `i${formData.index}`
     setSuccessMessage('The course has been added to the catalog. Thank you for your submission!')
     onAddCourse(formData)
     setFormData({
@@ -186,6 +188,7 @@ function CourseAddForm({ catalog, onAddCourse }) {
     })
     setTimeout(() => {
         setSuccessMessage('')
+        setNeedScroll(courseIndex)
     }, 5000)
   }
 
@@ -333,7 +336,7 @@ function CourseAddForm({ catalog, onAddCourse }) {
                 <label className="form-label" htmlFor="topics">Topics:</label>
                 <input type="text" name="topics" value={formData.topics} onChange={handleChange}
                     className={`form-input ${errors.topics ? 'error': ''}`}
-                    placeholder="Enter capitalized topics separated by commas. Refer to topics list in sidebar for existing topics, or add a new one"/>      
+                    placeholder="Enter capitalized topics separated by commas and spaces, e.g. 'Data Science, Programming'. Refer to topics list in sidebar for existing topics, or add a new one"/>      
                 {errors.topics && <p className="error-message">{errors.topics}</p>}
             </div>
             <div className="form-group">

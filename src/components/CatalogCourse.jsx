@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { FaEdit } from 'react-icons/fa'
 import EditingCourse from './EditingCourse'
 
@@ -8,7 +8,7 @@ import EditingCourse from './EditingCourse'
 // file. The user can also edit each course by clicking the edit button, which will bring up a different form-based 
 // component to store the user's changes to the course details.
 
-function CatalogCourse({ course, onEditCourse }) {
+function CatalogCourse({ course, onEditCourse, setNeedScroll }) {
 
     // Create a new string for instructor names, since some courses have multiple head instructors
     const instructors = Array.isArray(course.instructor) ? course.instructor.join(", ") : course.instructor
@@ -40,6 +40,8 @@ function CatalogCourse({ course, onEditCourse }) {
         setIsEditing(!isEditing)
     }
 
+    
+
     // Styling for edit button icon
     const iconStyleEdit = {color: "#060081", height: "25px", width: "25px"}
 
@@ -48,14 +50,15 @@ function CatalogCourse({ course, onEditCourse }) {
     return (
         <>
             {isEditing ? 
-            <EditingCourse course={course} toggleEdit={toggleEdit} onEditCourse={onEditCourse}/> :
+            <EditingCourse course={course} toggleEdit={toggleEdit} onEditCourse={onEditCourse} 
+                setNeedScroll={setNeedScroll}/> :
             <li className="course-item" id={`i${course.index}`}>
                 <div className="course-header">
                     <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id}: {course.title}</p>
                     <button 
                         className="course-edit-btn"
                         onClick={toggleEdit}>
-                        <FaEdit style={iconStyleEdit}/>
+                        <FaEdit style={iconStyleEdit}/> 
                     </button>    
                 </div> 
                 <p className="course-units">{course.units} Units</p>
