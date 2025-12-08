@@ -35,6 +35,9 @@ TO-DO:
 > [x] build new function for course editing and updating catalog state data (wow what a trial and error process this was)
 > [x] build new component for editing course interface -- use form fields and populate with existing course data! "save" button should call the new catalog update function, then set the edit status to false and display new catalog
 
+[x] add in QoL feature for scrolling to edited course after edit is complete... useCallback???
+> [x] add in QoL scroll to course added from "course add" form :)
+
 [x] create MIMs requirements filtering function and filter buttons
 [x] create DS certificate filtering function and filter buttons
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
@@ -48,7 +51,5 @@ TO-DO:
 
 MINOR FIXES:
 [x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)
-[x] add in QoL feature for scrolling to edited course after edit is complete... useCallback???
-> [x] add in QoL scroll to course added from "course add" form :)
-
 [ ] update course addition form value handling for multiple semester data... 
+[x] fix permitted unit values in both add and edit forms

@@ -54,7 +54,7 @@ function CatalogCourse({ course, onEditCourse, setNeedScroll }) {
                 setNeedScroll={setNeedScroll}/> :
             <li className="course-item" id={`i${course.index}`}>
                 <div className="course-header">
-                    <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id}: {course.title}</p>
+                    <p className="course-id-title">{course.type === "Core" ? "🌟 " : ""}Info {course.id} — {course.title}</p>
                     <button 
                         className="course-edit-btn"
                         onClick={toggleEdit}>

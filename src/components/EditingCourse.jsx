@@ -130,8 +130,14 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
     }
     if (!formData.units) {
         newErrors.units = "Unit count is required."   
-    } else if (formData.units.length === 1 && isNaN(parseInt(formData.units))) {
-        newErrors.units = "Unit count must be a numeric value."
+    } else if (formData.units.length === 1) {
+        if (isNaN(parseInt(formData.units))) {
+            newErrors.units = "Unit count must be a numeric value."
+        } else if (parseInt(formData.units) > 4 || parseInt(formData.units) <= 0) {
+            newErrors.units = "Unit count must be between 1 and 4."
+        }
+    } else if (!isNaN(parseInt(formData.units)) && parseInt(formData.units) < 0) {
+        newErrors.units = "Unit count must be between 1 and 4."
     } else if (formData.units.length > 1) {
         const unitsAlphCheck = formData.units.split('').map(c => {return /[a-zA-Z]/.test(c)})
         if (unitsAlphCheck.includes(true)) {
@@ -140,6 +146,9 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
         const unitsNumCheck = formData.units.split(' - ').map(n => (parseInt(n) >= 1 && parseInt(n) <= 4))
         if (unitsNumCheck.includes(false)) {
             newErrors.units = "Unit count must be a numeric value between 1 and 4."
+        }
+        if (formData.units.split('-').includes('') || formData.units.split('-').includes(' ')) {
+            newErrors.units = "Incomplete unit range provided."
         }
     }
     if (!formData.description.trim() || !formData.description) {
@@ -172,11 +181,11 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
 
   return (
     <div className="course-editing">
-      <p className="course-editing-header">Edit Course — {course.id} {course.title}</p>
+      <p className="course-editing-header">Edit Course — Info {course.id}, {course.title}</p>
       <p className="course-editing-note">Note that semester, timeslot, location, and instructor data are separated with a 
         ~ and space if there are multiple semesters; if there is a lab section in addition to the lecture session for 
         a semester, it's semicolon-delimited from the lecture session. Please ensure that the number of tilde-separated 
-        items is the same across the course semester, timeslot, and location information, and that you've ordered them 
+        items is the same across the course semester, timeslot, and location information, and that they are ordered
         properly so that the data for a single semester is displayed correctly. The list of topics should be separated 
         with a comma and a space.
       </p>

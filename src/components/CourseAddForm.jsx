@@ -134,8 +134,14 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
     }
     if (!formData.units) {
         newErrors.units = "Unit count is required."   
-    } else if (formData.units.length === 1 && isNaN(parseInt(formData.units))) {
-        newErrors.units = "Unit count must be a numeric value."
+    } else if (formData.units.length === 1) {
+        if (isNaN(parseInt(formData.units))) {
+            newErrors.units = "Unit count must be a numeric value."
+        } else if (parseInt(formData.units) > 4 || parseInt(formData.units) <= 0) {
+            newErrors.units = "Unit count must be between 1 and 4."
+        }
+    } else if (!isNaN(parseInt(formData.units)) && parseInt(formData.units) < 0) {
+        newErrors.units = "Unit count must be between 1 and 4."
     } else if (formData.units.length > 1) {
         const unitsAlphCheck = formData.units.split('').map(c => {return /[a-zA-Z]/.test(c)})
         if (unitsAlphCheck.includes(true)) {
@@ -144,6 +150,9 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
         const unitsNumCheck = formData.units.split(' - ').map(n => (parseInt(n) >= 1 && parseInt(n) <= 4))
         if (unitsNumCheck.includes(false)) {
             newErrors.units = "Unit count must be a numeric value between 1 and 4."
+        }
+        if (formData.units.split('-').includes('') || formData.units.split('-').includes(' ')) {
+            newErrors.units = "Incomplete unit range provided."
         }
     }
     if (!formData.description.trim() || !formData.description) {
