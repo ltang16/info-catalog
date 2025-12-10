@@ -109,6 +109,8 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
     }
   }
 
+  console.log(formData.id)
+
 
 
   // Handle form submission -- error validation, submission, updating catalog!
@@ -124,7 +126,8 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
         newErrors.id = "ID must be at least 200 for graduate-level courses."
     } else if (!formData.id.split('').map(char => {return /[0-9]/.test(char)}).includes(true)) {
         newErrors.id = "ID must have a numeric component."
-    } else if (formData.id.search(/[a-zA-Z]/) !== 3 && formData.id.search(/[a-zA-Z]/) !== -1) {
+    } else if ((formData.id.search(/[a-zA-Z]/) !== 3 && formData.id.search(/[a-zA-Z]/) !== -1) ||
+                parseInt(formData.id) > 999) {
         newErrors.id = "Numeric component of ID must have 3 digits."
     }
     if (!formData.title) {
