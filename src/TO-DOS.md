@@ -53,3 +53,5 @@ MINOR FIXES:
 [x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)
 [x] fix permitted unit values in both add and edit forms
 [x] update course addition form value handling for multiple semester data... 
+[x] fix button text to be white 
+[x] fix course sorting -- maybe don't allow 4-digit courses?

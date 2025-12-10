@@ -127,7 +127,9 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
     } else if (parseInt(formData.id.split('').map(char => {return /[0-9]/.test(char) ? char : '';}).join('')) < 200) {
         newErrors.id = "ID must be at least 200 for graduate-level courses."
     } else if (!formData.id.split('').map(char => {return /[0-9]/.test(char)}).includes(true)) {
-        newErrors.id = "ID must be have a numeric component."
+        newErrors.id = "ID must have a numeric component."
+    } else if (formData.id.search(/[a-zA-Z]/) !== 3 && formData.id.search(/[a-zA-Z]/) !== -1) {
+        newErrors.id = "Numeric component of ID must have 3 digits."
     }
     if (!formData.title) {
         newErrors.title = "Title is required."
