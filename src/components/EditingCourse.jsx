@@ -147,7 +147,7 @@ function EditingCourse({ course, toggleEdit, onEditCourse, setNeedScroll }) {
         if (unitsNumCheck.includes(false)) {
             newErrors.units = "Unit count must be a numeric value between 1 and 4."
         }
-        if (formData.units.split('-').includes('') || formData.units.split('-').includes(' ')) {
+        if (formData.units.trim().split('-').includes('') || formData.units.trim().split('-').includes(' ')) {
             newErrors.units = "Incomplete unit range provided."
         }
     }
