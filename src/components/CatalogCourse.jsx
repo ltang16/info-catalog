@@ -71,6 +71,7 @@ function CatalogCourse({ course, onEditCourse, setNeedScroll }) {
                         <p className="course-timeslot-details-single">{timeslots}</p>}
                 </ul>
                 <div className="course-description-container">
+                    <p className="course-description-text">Description:</p>
                     {descriptionArray.map((desc) => (
                         <p className="course-description">{desc}</p>
                     ))}
@@ -78,6 +79,10 @@ function CatalogCourse({ course, onEditCourse, setNeedScroll }) {
 
                 {/* If there's other information about this course, add it here in smaller text */}
                 {!course.other ? "" : <p className="course-other">{course.other}</p>}
+
+                {/* Add in a separator for the course requirements if needed */}
+                {(course.requirements || course.DScertification) ? 
+                <span className="course-separator"></span> : ""}
 
                 {/* If this course satisfies one of the MIMS degree requirements, add this section */}
                 {!course.requirements ? "" : <p className="course-requirements">

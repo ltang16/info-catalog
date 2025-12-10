@@ -113,16 +113,26 @@ function App() {
     // Handle 0 or multiple instructors
     if (!formData.instructor) {
       formData.instructor = "Staff"
-    } else if (formData.instructor.includes(',')) {
-      const instructorList = formData.instructor.split(', ')
+    } else if (formData.instructor.includes('~')) {
+      const instructorList = formData.instructor.split('~ ')
       formData.instructor = instructorList
     }
-    // Handle empty values for optional course attributes
+    // Handle empty or multiple values for optional course attributes
+    if (formData.semester.includes('~')) {
+      const semesterList = formData.semester.split('~ ')
+      formData.semester = semesterList
+    }
     if (!formData.timeslot) {
       formData.timeslot = null
+    } else if (formData.timeslot.includes('~')) {
+      const timeslotList = formData.timeslot.split('~ ')
+      formData.timeslot = timeslotList
     }
     if (!formData.location) {
       formData.location = null
+    } else if (formData.location.includes('~')) {
+      const locationList = formData.location.split('~ ')
+      formData.location = locationList
     }
     if (!formData.requirements) {
       formData.requirements = null

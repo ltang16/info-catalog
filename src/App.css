@@ -304,6 +304,12 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   margin: 5px 0px;
 }
 
+.course-description-text {
+  margin-top: 8px;
+  margin-bottom: -10px;
+  font-weight: 600;
+}
+
 .course-description {
   margin: 12px 0px;
 }
@@ -312,6 +318,13 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
   font-size: 11pt;
   font-style: italic;
   margin: 12px 0px;
+}
+
+.course-separator {
+  display: block;
+  height: 0.5px;
+  width: 33%;
+  background-color: black;
 }
 
 .course-requirements, .course-DScert {
@@ -384,6 +397,11 @@ Hamburger menu styling and animation sourced from professor Kay Ashaolu's work o
 .course-add-header {
   color: #060081;
   margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.course-add-explanation {
+  font-size: 11pt;
 }
 
 .form-group {

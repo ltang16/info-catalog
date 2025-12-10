@@ -42,14 +42,14 @@ TO-DO:
 [x] create DS certificate filtering function and filter buttons
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
 [x] add breadcrumbs component and full CSS
-[ ] 800+ word writeup :)  
+[x] 800+ word writeup :)  
 [ ] host live demo on Netlify or something similar  
 [x] start Github repo  
-[ ] push all code to Github repo
+[x] push all code to Github repo
 
 
 
 MINOR FIXES:
 [x] fix grid row spacing so that header section doesn't have weird gap when no courses are available -- unless responsive design not necessary... (yippee the course addition form is long enough)
-[ ] update course addition form value handling for multiple semester data... 
 [x] fix permitted unit values in both add and edit forms
+[x] update course addition form value handling for multiple semester data... 

@@ -177,7 +177,7 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
     // Otherwise, the form is valid and we can submit it :) show a success message, then clear the form after a few seconds
     // Also jump to where the new course has been added to the catalog after the wait time
     const courseIndex = `i${formData.index}`
-    setSuccessMessage('The course has been added to the catalog. Thank you for your submission!')
+    setSuccessMessage("The course has been added to the catalog. Thank you for your submission! You'll be redirected to the added course shortly.")
     onAddCourse(formData)
     setFormData({
         index: catalog.length + 1,
@@ -207,6 +207,13 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
     <div id="course-add-section">
         <h2 className="course-add-header">Add a New Course to the Catalog</h2>
         {successMessage ? <p className="success-message">{successMessage}</p> : 
+        <>
+        <p className="course-add-explanation">If adding multiple instructors, semesters, timeslots, or locations, please
+            separate them with a ~ followed by a space, and order the entries in each field from least to most recent. 
+            Additionally, please ensure that the semester, timeslot, and location fields all have the same number of 
+            entries -- for example, if you're entering data for 2 semesters, you must also have 2 values for timeslots 
+            and 2 values for location.
+        </p>
         <form className="course-add-form" onSubmit={handleSubmit}>
             <div className="form-group">
                 <label className="form-label" htmlFor="id">Course ID:</label>
@@ -233,7 +240,7 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
                 <label className="form-label" htmlFor="instructor">Instructor Name(s):</label>
                 <input type="text" name="instructor" value={formData.instructor} onChange={handleChange}
                     className="form-input"
-                    placeholder="For multiple instructors, separate the names with a comma"/>
+                    placeholder="Ex: (for multiple instructors) Instructor 1~ Instructor 2"/>
             </div>
             <div className="form-group">
                 <label className="form-label" htmlFor="description">Course Description:</label>
@@ -357,6 +364,7 @@ function CourseAddForm({ catalog, onAddCourse, setNeedScroll }) {
             </div>
             <button type="submit" className="course-add-submit">Submit Course</button>
         </form>
+        </>
         }
     </div>
   )
