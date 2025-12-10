@@ -22,6 +22,8 @@ The catalog data in the JSON file and the active MIMS degree requirement, Applie
 
 Additionally, I created a few small quality-of-life features to improve the user experience. The first was the "Add a New Course" hyperlink in the header section of the webpage, which scrolls to the bottom of the webpage where the user can add a course to the catalog via a form. The second is the "page up" icon fixed in the top right corner of the page; clicking this will take the user to the top of the page. Both of these features are meant to improve the user's navigability through the catalog, as the full catalog is fairly long at nearly 60 courses. Finally, I created an effect to scroll directly to a course after the user edits it or adds it to the catalog, since the viewport did not stay anchored to the original course entry by default, which could make it difficult for users to find the changes they've made to the catalog. 
 
+[The live demo of the catalog page is here.](https://info202laurentangfinal.netlify.app/)
+
 ## Attribution and Acknowledgements
 
 No AI, generative or otherwise, was used during the completion of this project and writeup. I consulted my previous work on Info 253A's curriculum as well as assignment/lab examples as provided by professor Kay Ashaolu, specifically Assignment 2 for general React guidance and Lab 2 for the clickable hamburger toggle/menu (responsive styling) code. The catalog details were of course sourced from the UC Berkeley Information course catalogs from 2024 - 2025 and 2025 - 2026.

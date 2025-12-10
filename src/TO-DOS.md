@@ -43,7 +43,7 @@ TO-DO:
 [x] create course topic filtering function (MULTIPLE ALLOWED) and selection buttons
 [x] add breadcrumbs component and full CSS
 [x] 800+ word writeup :)  
-[ ] host live demo on Netlify or something similar  
+[x] host live demo on Netlify or something similar  
 [x] start Github repo  
 [x] push all code to Github repo
 
